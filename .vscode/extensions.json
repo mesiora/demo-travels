@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "mubaidr.vuejs-extension-pack"
+    "mubaidr.vuejs-extension-pack",
+    "bradlc.vscode-tailwindcss"
   ]
 }
