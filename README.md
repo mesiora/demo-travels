@@ -2,6 +2,12 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Features
+
+- [x] ✨ Eslint
+- [x] 🧹 Prettier
+- [x] 🌊 [Tailwindcss](https://tailwindcss.nuxt.dev/)
+
 ## Setup
 
 Make sure to install the dependencies:
