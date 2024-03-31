@@ -1,6 +1,8 @@
 # Nuxt 3 Simple Starter - A simple starter for Nuxt 3
 
-Not thing perfect but "Everything can work!" - BigDaddy
+Nuxt 3 frontend template for third-party API integrations.
+
+> "Everything can work!" - BigDaddy
 
 ## Features
 
