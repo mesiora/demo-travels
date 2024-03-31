@@ -9,6 +9,10 @@ Nuxt 3 frontend template for third-party API integrations.
 - [x] ✨ Eslint
 - [x] 🧹 Prettier
 - [x] 🌊 [Tailwindcss](https://tailwindcss.nuxt.dev/)
+- [ ] 🔐 [nuxt-auth](https://github.com/sidebase/nuxt-auth)
+- [ ] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
+- [ ] 🍍 [Subscribing to the state](https://pinia.vuejs.org/core-concepts/state.html#Subscribing-to-the-state)
+- [x] 🍀 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 
 ## Setup
 

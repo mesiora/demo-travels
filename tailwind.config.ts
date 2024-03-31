@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+export default <Partial<Config>>{
   theme: {
     container: {
       center: true,
@@ -11,5 +12,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };
