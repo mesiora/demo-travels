@@ -13,6 +13,7 @@ Nuxt 3 frontend template for third-party API integrations.
 - [ ] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [ ] 🍍 [Subscribing to the state](https://pinia.vuejs.org/core-concepts/state.html#Subscribing-to-the-state)
 - [x] 🍀 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
+- [ ] 🆎 [Internationalization (i18n)](https://v8.i18n.nuxtjs.org/)
 
 ## Setup
 
