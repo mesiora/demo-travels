@@ -1,8 +1,6 @@
 # Nuxt 3 Simple Starter - A simple starter for Nuxt 3
 
-Nuxt 3 frontend template for third-party API integrations.
-
-> "Everything can work!" - BigDaddy
+Nuxt 3 frontend template for third-party API integrations based on JSON-LD.
 
 ## Features
 
@@ -13,7 +11,7 @@ Nuxt 3 frontend template for third-party API integrations.
 - [ ] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [ ] 🍍 [Subscribing to the state](https://pinia.vuejs.org/core-concepts/state.html#Subscribing-to-the-state)
 - [x] 🍀 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [ ] 🆎 [Internationalization (i18n)](https://v8.i18n.nuxtjs.org/)
+- [x] 🆎 [Internationalization (i18n)](https://v8.i18n.nuxtjs.org/)
 
 ## Setup
 
