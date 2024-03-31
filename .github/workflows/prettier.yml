@@ -15,6 +15,9 @@ jobs:
           # This is important to fetch the changes to the previous commit
           fetch-depth: 0
 
+      - name: Install Prettier
+        run: npm install --save-dev prettier prettier-plugin-tailwindcss
+
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
