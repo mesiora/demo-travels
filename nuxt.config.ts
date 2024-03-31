@@ -2,12 +2,22 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      titleTemplate: "%s - Nuxt 3 Simple Starter",
+      title: "Home",
+    },
+  },
+
+  css: ["@/assets/css/main.css"],
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/eslint-module",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
+    "@nuxtjs/google-fonts",
   ],
 
   i18n: {
@@ -24,6 +34,12 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: "lang",
     defaultLocale: "en",
+  },
+
+  googleFonts: {
+    families: {
+      Inter: true,
+    },
   },
 
   postcss: {

@@ -7,11 +7,12 @@ Nuxt 3 frontend template for third-party API integrations based on JSON-LD.
 - [x] ✨ Eslint
 - [x] 🧹 Prettier
 - [x] 🌊 [Tailwindcss](https://tailwindcss.nuxt.dev/)
-- [ ] 🔐 [nuxt-auth](https://github.com/sidebase/nuxt-auth)
-- [ ] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
-- [ ] 🍍 [Subscribing to the state](https://pinia.vuejs.org/core-concepts/state.html#Subscribing-to-the-state)
+- [ ] 🔐 Authentication [(Kinde)](https://kinde.com/docs/developer-tools/nuxt-module/?utm_source=nuxt.com&utm_medium=aside-module&utm_campaign=nuxt.com)
+- [ ] 🚀 Security Module for Nuxt based on OWASP Top 10 and Helmet [(security)](https://nuxt-security.vercel.app/?utm_source=nuxt.com&utm_medium=aside-module&utm_campaign=nuxt.com)
+- [x] 🍍 State & Store Management [(Pinia)](https://pinia.vuejs.org/)
+  - [ ] [Subscribing to the state](https://pinia.vuejs.org/core-concepts/state.html#Subscribing-to-the-state)
 - [x] 🍀 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [x] 🆎 [Internationalization (i18n)](https://v8.i18n.nuxtjs.org/)
+- [x] 🆎 Translation [(i18n)](https://v8.i18n.nuxtjs.org/)
 
 ## Setup
 
