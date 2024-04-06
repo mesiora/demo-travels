@@ -1,7 +1,9 @@
 <template>
-  <main class="relative min-h-screen">
+  <main class="relative mt-20">
     <AppHeader />
-    <slot></slot>
+    <div class="relative min-h-[calc(100vh-144px)]">
+      <slot></slot>
+    </div>
     <AppFooter />
   </main>
 </template>

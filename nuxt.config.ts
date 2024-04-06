@@ -9,6 +9,14 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    "/api/**": {
+      proxy: {
+        to: `${process.env.PROXY_API_BASE}/**`,
+      },
+    },
+  },
+
   css: ["@/assets/css/main.css"],
 
   modules: [

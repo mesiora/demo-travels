@@ -1,12 +1,10 @@
-import type { PagedCollection } from "~/types/collection";
-
 export default function createApiOperation<T>(endpoint: string) {
   function serialize(body: T | object): Record<string, any> {
     return JSON.parse(JSON.stringify(body));
   }
 
   async function collection(params?: object) {
-    return await $fetch<PagedCollection<T>>(`${endpoint}`, {
+    return await $fetch<T[]>(`${endpoint}`, {
       params,
     });
   }

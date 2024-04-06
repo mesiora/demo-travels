@@ -1,6 +1,6 @@
 # Nuxt 3 Simple Starter - A simple starter for Nuxt 3
 
-Nuxt 3 frontend template for third-party API integrations based on JSON-LD.
+Nuxt 3 frontend template for third-party API integrations.
 
 ## Features
 
