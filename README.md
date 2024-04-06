@@ -2,6 +2,8 @@
 
 Nuxt 3 frontend template for third-party API integrations.
 
+DEMO: [ nuxt-starter-template.vercel.app ](https://nuxt-starter-template.vercel.app/)
+
 ## Features
 
 - [x] ✨ Eslint
