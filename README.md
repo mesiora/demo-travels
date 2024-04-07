@@ -1,6 +1,12 @@
 # Nuxt 3 Simple Starter - A simple starter for Nuxt 3
 
-Nuxt 3 frontend template for third-party API integrations.
+Nuxt 3 frontend template designed specifically for seamless integration with third-party APIs. This template empowers developers to swiftly build robust web applications leveraging the power of Nuxt 3, Typescript, and dynamic interface and type support.
+
+- Typescript Support: Leverage predefined interfaces and types to streamline data handling and ensure consistency across your application.
+
+- Dynamic API Operations: Utilize handy utility functions provided in the template to generate API operations dynamically for Pinia, facilitating smoother integration with various third-party APIs.
+
+- No UI framework is included in this template. You can add your own UI framework.
 
 DEMO: https://nuxt3-starter-template-ten.vercel.app/
 
@@ -9,7 +15,7 @@ DEMO: https://nuxt3-starter-template-ten.vercel.app/
 - [x] ✨ Eslint
 - [x] 🧹 Prettier
 - [x] 🌊 [Tailwindcss](https://tailwindcss.nuxt.dev/)
-- [ ] 🔐 Authentication [(Kinde)](https://kinde.com/docs/developer-tools/nuxt-module/?utm_source=nuxt.com&utm_medium=aside-module&utm_campaign=nuxt.com)
+- [ ] 🔐 Authentication
 - [ ] 🚀 Security Module for Nuxt based on OWASP Top 10 and Helmet [(security)](https://nuxt-security.vercel.app/?utm_source=nuxt.com&utm_medium=aside-module&utm_campaign=nuxt.com)
 - [x] 🍍 State & Store Management [(Pinia)](https://pinia.vuejs.org/)
   - [ ] [Subscribing to the state](https://pinia.vuejs.org/core-concepts/state.html#Subscribing-to-the-state)
