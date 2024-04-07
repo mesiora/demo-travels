@@ -24,10 +24,9 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 useHead({
   title: "Demo",
-  description: "Nuxt 3 frontend template for third-party API integrations",
 });
 
 const postStore = usePostStore();
@@ -52,10 +51,6 @@ const {
 watch(error, (e) => {
   // TODO: Handle error or display a toast
   if (!e) return;
-
-  console.error(e);
   alert(e.message);
 });
 </script>
-
-<style lang="scss" scoped></style>

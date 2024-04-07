@@ -26,5 +26,3 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 </script>
-
-<style scoped></style>
