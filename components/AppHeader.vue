@@ -1,11 +1,11 @@
 <template>
-  <nav class="fixed top-0 left-0 bg-white z-50 h-20 w-full">
-    <div class="container flex items-center h-full">
+  <nav class="fixed left-0 top-0 z-50 h-20 w-full bg-white">
+    <div class="container flex h-full items-center">
       <NuxtLink :to="localePath({ name: 'index' })">
         <img src="~/assets/images/logo-no-background.svg" alt="Logo" />
       </NuxtLink>
 
-      <div class="flex items-center gap-4 ml-auto">
+      <div class="ml-auto flex items-center gap-4">
         <LanguageSwitcher />
 
         <a

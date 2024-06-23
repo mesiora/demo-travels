@@ -21,12 +21,18 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/eslint-module",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
     "@nuxtjs/google-fonts",
+    "@nuxt/eslint",
   ],
+
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 
   i18n: {
     locales: [
