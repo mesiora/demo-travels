@@ -1,6 +1,6 @@
 <template>
   <div class="container py-20">
-    <h1 class="text-5xl font-bold sm:text-7xl tracking-tight">Resources</h1>
+    <h1 class="text-5xl font-bold tracking-tight sm:text-7xl">Resources</h1>
 
     <sub>
       API powered by
@@ -13,11 +13,11 @@
     </sub>
 
     <section
-      class="my-8 p-4 text-[#050708] bg-[#f0f0f0] rounded-lg w-full text-sm whitespace-pre"
+      class="my-8 w-full whitespace-pre rounded-lg bg-[#f0f0f0] p-4 text-sm text-[#050708]"
     >
       <div v-if="pending">Loading ...</div>
 
-      <code v-else class="overflow-x-auto max-h-[50vh] block">
+      <code v-else class="block max-h-[50vh] overflow-x-auto">
         {{ collection }}
       </code>
     </section>

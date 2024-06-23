@@ -1,5 +1,5 @@
 <template>
-  <div class="uppercase text-xs divide-x">
+  <div class="divide-x text-xs uppercase">
     <NuxtLink
       v-for="locale in locales"
       :key="locale.code"
