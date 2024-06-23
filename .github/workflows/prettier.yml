@@ -19,5 +19,6 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           # This part is also where you can pass other options, for example:
+          prettier_plugins: "prettier-plugin-tailwindcss"
           prettier_options: --write **/*.{js,jsx,ts,tsx,json,css,vue,md}
           only_changed: True
