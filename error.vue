@@ -8,13 +8,13 @@
 <script setup lang="ts">
 const props = defineProps<{
   error: {
-    statusCode: number;
-    statusMessage: string;
-    message?: string;
-    stack?: string;
-    data?: any;
-  };
-}>();
+    statusCode: number
+    statusMessage: string
+    message?: string
+    stack?: string
+    data?: any
+  }
+}>()
 
-const handleError = () => clearError({ redirect: "/" });
+const handleError = () => clearError({ redirect: '/' })
 </script>

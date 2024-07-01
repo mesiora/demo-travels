@@ -26,31 +26,31 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Demo",
-});
+  title: 'Demo',
+})
 
-const postStore = usePostStore();
+const postStore = usePostStore()
 const filters = ref({
   orSearch_search: undefined,
   page: 1,
   itemsPerPage: 10,
-});
+})
 
 const {
   data: collection,
   pending,
   error,
 } = await useLazyAsyncData(
-  "api.posts",
+  'api.posts',
   () => postStore.collection(filters.value),
   {
     watch: [filters],
   },
-);
+)
 
 watch(error, (e) => {
   // TODO: Handle error or display a toast
-  if (!e) return;
-  alert(e.message);
-});
+  if (!e) return
+  alert(e.message)
+})
 </script>

@@ -1,5 +1,5 @@
 export interface Blameable {
-  createdBy?: string;
-  updatedBy?: string;
-  deletedBy?: string;
+  createdBy?: string
+  updatedBy?: string
+  deletedBy?: string
 }
