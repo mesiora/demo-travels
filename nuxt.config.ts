@@ -28,12 +28,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
   ],
 
-  eslint: {
-    config: {
-      stylistic: true,
-    },
-  },
-
   i18n: {
     locales: [
       {
