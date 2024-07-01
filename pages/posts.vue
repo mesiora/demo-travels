@@ -8,8 +8,9 @@
         href="https://jsonplaceholder.typicode.com/"
         target="_blank"
         rel="noopener noreferrer"
-        >{JSON} Placeholder</a
       >
+        {JSON} Placeholder
+      </a>
     </sub>
 
     <section
