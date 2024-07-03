@@ -4,50 +4,44 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: "%s - Nuxt 3 Simple Starter",
-      title: "Home",
+      titleTemplate: '%s - Nuxt 3 Simple Starter',
+      title: 'Home',
     },
   },
 
   routeRules: {
-    "/api/**": {
+    '/api/**': {
       proxy: {
         to: `${process.env.PROXY_API_BASE}/**`,
       },
     },
   },
 
-  css: ["@/assets/css/main.css"],
+  css: ['@/assets/css/main.css'],
 
   modules: [
-    "@nuxtjs/tailwindcss",
-    "@vueuse/nuxt",
-    "@nuxtjs/i18n",
-    "@pinia/nuxt",
-    "@nuxtjs/google-fonts",
-    "@nuxt/eslint",
+    '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+    '@nuxtjs/google-fonts',
+    '@nuxt/eslint',
   ],
-
-  eslint: {
-    config: {
-      stylistic: true,
-    },
-  },
 
   i18n: {
     locales: [
       {
-        code: "en",
-        file: "en-US.json",
+        code: 'en',
+        file: 'en-US.json',
       },
       {
-        code: "th",
-        file: "th-TH.json",
+        code: 'th',
+        file: 'th-TH.json',
       },
     ],
     lazy: true,
-    langDir: "lang",
-    defaultLocale: "en",
+    langDir: 'lang',
+    defaultLocale: 'en',
   },
 
   googleFonts: {
@@ -58,9 +52,9 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      "postcss-nested": {},
-      "postcss-hexrgba": {},
-      "postcss-import": {},
+      'postcss-nested': {},
+      'postcss-hexrgba': {},
+      'postcss-import': {},
     },
   },
-});
+})
