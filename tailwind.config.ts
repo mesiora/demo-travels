@@ -3,16 +3,13 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
   theme: {
-    container: {
-      center: true,
-      padding: '1.25rem',
-    },
     extend: {
-      aspectRatio: {
-        '4/3': '4 / 3',
-      },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Prompt', ...defaultTheme.fontFamily.sans],
+        'source-code-pro': ['Source Code Pro', ...defaultTheme.fontFamily.mono],
+      },
+      colors: {
+        dark: '#1c1b22',
       },
     },
   },

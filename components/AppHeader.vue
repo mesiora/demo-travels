@@ -1,25 +1,24 @@
 <template>
-  <nav class="fixed left-0 top-0 z-50 h-20 w-full bg-white">
-    <div class="container flex h-full items-center">
-      <NuxtLink :to="localePath({ name: 'index' })">
-        <img src="~/assets/images/logo-no-background.svg" alt="Logo" />
+  <UContainer>
+    <nav class="flex items-center justify-between gap-4 py-8">
+      <NuxtLink
+        :to="
+          localeRoute({
+            name: 'index',
+          })
+        "
+        aria-label="Home"
+      >
+        <Logo class="text-5xl" />
       </NuxtLink>
 
-      <div class="ml-auto flex items-center gap-4">
-        <LanguageSwitcher />
+      <LanguageSwitcher class="ml-auto" />
 
-        <a
-          href="https://github.com/medusiora/nuxt-starter-template"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </nav>
+      <ColorMode />
+    </nav>
+  </UContainer>
 </template>
 
-<script setup lang="ts">
-const localePath = useLocalePath()
+<script lang="ts" setup>
+const localeRoute = useLocaleRoute()
 </script>

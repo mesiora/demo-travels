@@ -1,30 +1,38 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-09-29',
+
   devtools: { enabled: true },
+
+  nitro: {
+    static: true,
+  },
 
   app: {
     head: {
-      titleTemplate: '%s - Nuxt 3 Simple Starter',
-      title: 'Home',
-    },
-  },
-
-  routeRules: {
-    '/api/**': {
-      proxy: {
-        to: `${process.env.PROXY_API_BASE}/**`,
+      titleTemplate: '%s - Travelers',
+      title: 'Demo',
+      htmlAttrs: {
+        lang: 'en',
       },
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'A demo Nuxt.js project',
+        },
+      ],
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   css: ['@/assets/css/main.css'],
 
   modules: [
-    '@nuxtjs/tailwindcss',
+    '@nuxt/ui',
+    '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
-    '@pinia/nuxt',
-    '@nuxtjs/google-fonts',
     '@nuxt/eslint',
   ],
 
@@ -46,7 +54,8 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Inter: true,
+      Prompt: [300],
+      'Source Code Pro ': [600],
     },
   },
 
@@ -57,6 +66,4 @@ export default defineNuxtConfig({
       'postcss-import': {},
     },
   },
-
-  compatibilityDate: '2024-09-29',
 })
