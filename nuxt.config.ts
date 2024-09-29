@@ -57,4 +57,6 @@ export default defineNuxtConfig({
       'postcss-import': {},
     },
   },
+
+  compatibilityDate: '2024-09-29',
 })
