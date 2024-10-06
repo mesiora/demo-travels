@@ -1,10 +1,11 @@
 <template>
-  <div class="divide-x text-xs uppercase">
+  <div class="divide-x uppercase">
     <NuxtLink
       v-for="locale in locales"
       :key="locale.code"
       :to="switchLocalePath(locale.code)"
-      class="px-1"
+      class="px-2"
+      :title="locale.code"
     >
       {{ locale.code }}
     </NuxtLink>

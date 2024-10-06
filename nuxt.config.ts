@@ -33,8 +33,18 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
+    'nuxt-svgo',
     '@nuxt/eslint',
   ],
+
+  colorMode: {
+    preference: 'light',
+  },
+
+  svgo: {
+    componentPrefix: 'svg',
+    autoImportPath: './assets/icons/',
+  },
 
   i18n: {
     locales: [
@@ -54,8 +64,8 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Prompt: [300],
-      'Source Code Pro ': [600],
+      Prompt: [300, 500],
+      Montserrat: [300, 400],
     },
   },
 

@@ -1,5 +1,15 @@
 export default defineAppConfig({
   ui: {
-    primary: 'amber',
+    primary: 'red',
+    button: {
+      default: {
+        color: 'sorbus',
+      },
+      padding: {
+        lg: 'px-6 py-4',
+        xl: 'px-6 py-4',
+      },
+      rounded: 'rounded-md',
+    },
   },
 })

@@ -5,6 +5,7 @@
       color="gray"
       variant="ghost"
       aria-label="Theme"
+      class="text-white"
       @click="isDark = !isDark"
     />
     <template #fallback>
