@@ -43,6 +43,24 @@
         </NuxtLink>
       </li>
     </ui>
+
+    <div class="mt-6 grid grid-cols-3 gap-6">
+      <InputMenuLocation size="lg" />
+
+      <DateRangePicker
+        size="lg"
+        block
+        variant="link"
+        color="gray"
+        class="rounded-md border"
+      />
+
+      <div class="flex gap-6">
+        <InputMenuPeople size="lg" class="flex-1" />
+
+        <UButton class="font-semibold" size="lg"> SEARCH </UButton>
+      </div>
+    </div>
   </form>
 </template>
 

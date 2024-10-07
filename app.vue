@@ -6,6 +6,10 @@
 </template>
 
 <style lang="postcss">
+html {
+  @apply font-sans antialiased;
+}
+
 .custom-scrollbar {
   ::-webkit-scrollbar {
     width: 7px;
@@ -59,7 +63,7 @@ a {
 
     &.active {
       &::before {
-        @apply bg-sorbus-600 visible w-full;
+        @apply visible w-full bg-sorbus-600;
       }
     }
   }

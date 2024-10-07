@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
     'nuxt-svgo',
+    '@nuxt/icon',
     '@nuxt/eslint',
   ],
 
