@@ -8,7 +8,9 @@
     trailing
     by="osm_id"
     v-bind="$attrs"
-  />
+  >
+    <template #empty> Type something to search... </template>
+  </UInputMenu>
 </template>
 
 <script setup lang="ts">

@@ -47,13 +47,7 @@
     <div class="mt-6 grid grid-cols-3 gap-6">
       <InputMenuLocation size="lg" />
 
-      <DateRangePicker
-        size="lg"
-        block
-        variant="link"
-        color="gray"
-        class="rounded-md border"
-      />
+      <DateRangePicker size="lg" block color="white" class="" />
 
       <div class="flex gap-6">
         <InputMenuPeople size="lg" class="flex-1" />
