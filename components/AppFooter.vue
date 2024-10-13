@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-black py-16 text-xs text-white">
-    <UContainer>
+    <UContainer class="container">
       <Subscribe />
       <div class="flex justify-between">
         <div>

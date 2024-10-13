@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'nuxt-svgo',
     '@nuxt/icon',
+    'nuxt-swiper',
     '@nuxt/eslint',
   ],
 
