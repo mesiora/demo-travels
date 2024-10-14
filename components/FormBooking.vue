@@ -1,14 +1,12 @@
 <template>
   <form
     id="form-booking"
-    class="mx-10 w-full rounded-2xl bg-white p-8 shadow-lg shadow-slate-100 xl:mx-0 dark:bg-gray-900 dark:text-white dark:shadow-none"
+    class="z-50 mx-10 w-full rounded-2xl bg-white p-8 shadow-lg shadow-slate-100 xl:mx-0"
     :class="{
       'bottom-hang absolute top-full -translate-y-1/2': bottomHang,
     }"
   >
-    <ui
-      class="flex list-none divide-x divide-gray-200 font-semibold leading-8 dark:divide-gray-800"
-    >
+    <ui class="flex list-none divide-x divide-gray-200 font-semibold leading-8">
       <li>
         <NuxtLink
           to="javascript:void(0)"
@@ -63,7 +61,18 @@ defineProps({
   bottomHang: Boolean,
 })
 
+const route = useRoute()
+
 const activeTab = ref(0)
+
+watch(
+  () => route.query.form,
+  (newValue) => {
+    if (newValue) {
+      activeTab.value = Number(newValue)
+    }
+  },
+)
 </script>
 
 <style lang="postcss">

@@ -6,9 +6,7 @@
     </UButton>
 
     <template #panel="{ close }">
-      <div
-        class="flex items-center divide-gray-200 sm:divide-x dark:divide-gray-800"
-      >
+      <div class="flex items-center divide-gray-200 sm:divide-x">
         <div class="hidden flex-col py-4 sm:flex">
           <UButton
             v-for="(range, index) in ranges"
@@ -19,8 +17,8 @@
             class="rounded-none px-6"
             :class="[
               isRangeSelected(range.duration)
-                ? 'bg-gray-100 dark:bg-gray-800'
-                : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
+                ? 'bg-gray-100'
+                : 'hover:bg-gray-50',
             ]"
             truncate
             @click="selectRange(range.duration)"
@@ -37,7 +35,7 @@
 import { add, format, isSameDay, type Duration } from 'date-fns'
 
 const ranges = [
-  { label: 'Next 2 days', duration: { days: 7 } },
+  { label: 'Next 2 days', duration: { days: 2 } },
   { label: 'Next 7 days', duration: { days: 7 } },
   { label: 'Next 14 days', duration: { days: 14 } },
   { label: 'Next 30 days', duration: { days: 30 } },

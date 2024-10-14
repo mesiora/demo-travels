@@ -7,7 +7,7 @@
 
 <style lang="postcss">
 html {
-  @apply font-sans antialiased;
+  @apply bg-[#f0f2f3] font-sans font-normal antialiased;
 }
 
 .custom-scrollbar {
@@ -52,7 +52,7 @@ a {
     &::before {
       height: 3px;
       left: 0;
-      @apply left-0 top-full bg-gray-100 dark:bg-gray-800 dark:shadow-none;
+      @apply left-0 top-full bg-gray-100;
     }
 
     &:hover {

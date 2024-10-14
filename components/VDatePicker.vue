@@ -73,8 +73,4 @@ const attrs = {
   --vc-accent-800: rgb(var(--color-primary-800));
   --vc-accent-900: rgb(var(--color-primary-900));
 }
-
-.vc-title {
-  @apply text-sm font-semibold uppercase;
-}
 </style>
