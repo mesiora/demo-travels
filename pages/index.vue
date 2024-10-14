@@ -141,6 +141,7 @@
           :slides-per-view="3"
           :centered-slides="true"
           :initial-slide="1"
+          :loop="true"
           class="dg-swiper"
         >
           <SwiperSlide
