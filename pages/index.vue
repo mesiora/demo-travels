@@ -14,13 +14,13 @@
       </UContainer>
 
       <div class="swiper-free-mode-container my-10">
-        <LazySwiper
+        <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="3"
           :space-between="30"
           :free-mode="true"
         >
-          <LazySwiperSlide
+          <SwiperSlide
             v-for="(slide, index) in popularDestinations"
             :key="index"
             class="cursor-pointer"
@@ -50,11 +50,11 @@
                 </div>
               </div>
             </div>
-          </LazySwiperSlide>
-          <LazySwiperSlide>
+          </SwiperSlide>
+          <SwiperSlide>
             <!-- Empty slice to make a space for last item -->
-          </LazySwiperSlide>
-        </LazySwiper>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
 
@@ -65,13 +65,13 @@
       </UContainer>
 
       <div class="swiper-free-mode-container my-10">
-        <LazySwiper
+        <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="4"
           :space-between="30"
           :free-mode="true"
         >
-          <LazySwiperSlide
+          <SwiperSlide
             v-for="(slide, index) in specialOffer"
             :key="index"
             class="cursor-pointer"
@@ -120,11 +120,11 @@
                 </div>
               </div>
             </div>
-          </LazySwiperSlide>
-          <LazySwiperSlide>
+          </SwiperSlide>
+          <SwiperSlide>
             <!-- Empty slice to make a space for last item -->
-          </LazySwiperSlide>
-        </LazySwiper>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
     <section class="py-7">
@@ -136,14 +136,14 @@
       </UContainer>
 
       <div class="my-10">
-        <LazySwiper
+        <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="3"
           :centered-slides="true"
           :initial-slide="1"
           class="dg-swiper"
         >
-          <LazySwiperSlide
+          <SwiperSlide
             v-for="(slide, index) in destinationGallery"
             :key="index"
             class="cursor-pointer"
@@ -155,10 +155,10 @@
                 alt="Popular Destination"
               />
             </div>
-          </LazySwiperSlide>
+          </SwiperSlide>
 
-          <LazySwiperNavigation />
-        </LazySwiper>
+          <SwiperNavigation />
+        </Swiper>
       </div>
     </section>
   </div>
@@ -258,16 +258,16 @@ const destinationGallery = [
 
 onMounted(() => {
   nextTick(() => {
-    setLazySwiperWidth()
-    window.addEventListener('resize', setLazySwiperWidth)
+    setSwiperWidth()
+    window.addEventListener('resize', setSwiperWidth)
   })
 })
 
 onUnmounted(() => {
-  window.removeEventListener('resize', setLazySwiperWidth)
+  window.removeEventListener('resize', setSwiperWidth)
 })
 
-function setLazySwiperWidth() {
+function setSwiperWidth() {
   const container = document.querySelector('.container') as HTMLElement
   const body = document.querySelector('body') as HTMLElement
 
