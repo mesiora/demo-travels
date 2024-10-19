@@ -166,15 +166,15 @@
 </template>
 
 <script setup lang="ts">
-import IPD1 from '~/assets/images/pd-1.png'
-import IPD2 from '~/assets/images/pd-2.png'
-import IPD3 from '~/assets/images/pd-3.png'
-import ISO1 from '~/assets/images/so-1.png'
-import ISO2 from '~/assets/images/so-2.png'
-import ISO3 from '~/assets/images/so-3.png'
-import IDG1 from '~/assets/images/dg-1.png'
-import IDG2 from '~/assets/images/dg-2.png'
-import IDG3 from '~/assets/images/dg-3.png'
+import IPD1 from '~/assets/images/pd-1.webp'
+import IPD2 from '~/assets/images/pd-2.webp'
+import IPD3 from '~/assets/images/pd-3.webp'
+import ISO1 from '~/assets/images/so-1.webp'
+import ISO2 from '~/assets/images/so-2.webp'
+import ISO3 from '~/assets/images/so-3.webp'
+import IDG1 from '~/assets/images/dg-1.webp'
+import IDG2 from '~/assets/images/dg-2.webp'
+import IDG3 from '~/assets/images/dg-3.webp'
 
 const popularDestinations = [
   {

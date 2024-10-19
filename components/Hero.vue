@@ -26,7 +26,7 @@
 
 <style lang="postcss">
 #hero {
-  background-image: url('~/assets/images/hero.png');
+  background-image: url('~/assets/images/hero.webp');
   background-size: cover;
   background-position: center center;
   height: calc(100vh - 80px);
