@@ -137,11 +137,15 @@
 
       <div class="my-10">
         <Swiper
-          :modules="[SwiperFreeMode]"
+          :modules="[SwiperFreeMode, SwiperAutoplay]"
           :slides-per-view="3"
           :centered-slides="true"
           :initial-slide="1"
           :loop="true"
+          :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
           class="dg-swiper"
         >
           <SwiperSlide
