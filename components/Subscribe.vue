@@ -21,8 +21,8 @@
             </h4>
           </div>
           <div class="flex-1">
-            <h6 class="text-xl font-semibold text-gray-500">The Travel</h6>
-            <p class="text-gray-500">
+            <h5 class="text-xl font-semibold text-gray-600">The Travel</h5>
+            <p class="text-gray-600">
               Get inspired! Receive our travel discounts, Tip behind the scene
               stories.
             </p>

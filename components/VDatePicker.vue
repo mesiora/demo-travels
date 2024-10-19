@@ -1,3 +1,13 @@
+<template>
+  <VCalendarDatePicker
+    v-if="date && typeof date === 'object'"
+    v-model.range="date"
+    :columns="2"
+    v-bind="{ ...attrs, ...$attrs }"
+  />
+  <VCalendarDatePicker v-else v-model="date" v-bind="{ ...attrs, ...$attrs }" />
+</template>
+
 <script setup lang="ts">
 import 'v-calendar/dist/style.css'
 import { DatePicker as VCalendarDatePicker } from 'v-calendar'
@@ -34,16 +44,6 @@ const attrs = {
 }
 </script>
 
-<template>
-  <VCalendarDatePicker
-    v-if="date && typeof date === 'object'"
-    v-model.range="date"
-    :columns="2"
-    v-bind="{ ...attrs, ...$attrs }"
-  />
-  <VCalendarDatePicker v-else v-model="date" v-bind="{ ...attrs, ...$attrs }" />
-</template>
-
 <style lang="postcss">
 :root {
   --vc-font-family: Montserrat, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -54,7 +54,7 @@ const attrs = {
   --vc-gray-200: rgb(var(--color-gray-200));
   --vc-gray-300: rgb(var(--color-gray-300));
   --vc-gray-400: rgb(var(--color-gray-400));
-  --vc-gray-500: rgb(var(--color-gray-500));
+  --vc-gray-600: rgb(var(--color-gray-600));
   --vc-gray-600: rgb(var(--color-gray-600));
   --vc-gray-700: rgb(var(--color-gray-700));
   --vc-gray-800: rgb(var(--color-gray-800));

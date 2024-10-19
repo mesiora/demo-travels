@@ -1,5 +1,5 @@
 <template>
-  <div class="relative my-3 flex gap-3 pl-[62%] text-3xl text-sorbus-600">
+  <div class="relative my-3 flex gap-3 pl-[62%] text-3xl text-sorbus-700">
     <span
       :class="{
         'cursor-not-allowed opacity-50': isBeginning,

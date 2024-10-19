@@ -1,6 +1,6 @@
 <template>
   <UPopover :popper="{ placement: 'bottom-start' }">
-    <UButton v-bind="$attrs">
+    <UButton v-bind="$attrs" aria-label="Select date range">
       {{ format(selected.start, 'd MMM, yyy') }} -
       {{ format(selected.end, 'd MMM, yyy') }}
     </UButton>
@@ -21,6 +21,7 @@
                 : 'hover:bg-gray-50',
             ]"
             truncate
+            aria-label="Select date"
             @click="selectRange(range.duration)"
           />
         </div>

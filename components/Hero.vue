@@ -11,9 +11,9 @@
           <h1 class="font-prompt text-[80px] font-medium tracking-wide">
             LIVE & TRAVEL
           </h1>
-          <h4 class="text-xl">
+          <h3 class="text-xl">
             Exploring new places is a great way to relax and clear your mind.
-          </h4>
+          </h3>
         </div>
 
         <FormBooking bottom-hang />

@@ -8,6 +8,8 @@
     trailing
     by="osm_id"
     v-bind="$attrs"
+    aria-label="Search for a location in Japan"
+    name="location"
   >
     <template #empty> Type something to search... </template>
   </UInputMenu>

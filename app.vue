@@ -63,7 +63,7 @@ a {
 
     &.active {
       &::before {
-        @apply visible w-full bg-sorbus-600;
+        @apply visible w-full bg-sorbus-700;
       }
     }
   }

@@ -6,8 +6,10 @@
       'bottom-hang absolute left-0 top-full -translate-y-1/2': bottomHang,
     }"
   >
-    <ui class="flex list-none divide-x divide-gray-200 font-semibold leading-8">
-      <li>
+    <nav
+      class="flex list-none divide-x divide-gray-200 font-semibold leading-8"
+    >
+      <div>
         <NuxtLink
           to="javascript:void(0)"
           class="primary mx-4 flex items-center gap-1"
@@ -17,8 +19,8 @@
           <svg-flag class="text-base" />
           Package
         </NuxtLink>
-      </li>
-      <li>
+      </div>
+      <div>
         <NuxtLink
           to="javascript:void(0)"
           class="primary mx-4 flex items-center gap-1"
@@ -28,8 +30,8 @@
           <svg-airplane class="text-base" />
           Flights
         </NuxtLink>
-      </li>
-      <li>
+      </div>
+      <div>
         <NuxtLink
           to="javascript:void(0)"
           class="primary mx-4 flex items-center gap-1"
@@ -39,8 +41,8 @@
           <svg-bed class="text-base" />
           Hotel
         </NuxtLink>
-      </li>
-    </ui>
+      </div>
+    </nav>
 
     <div class="mt-6 grid grid-cols-3 gap-6">
       <InputMenuLocation size="lg" />

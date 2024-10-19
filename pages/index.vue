@@ -7,7 +7,7 @@
         <h3 class="mb-3 text-3xl font-bold tracking-wide">
           Popular Destinations
         </h3>
-        <p class="text-gray-500">
+        <p class="text-gray-600">
           Most popular destinations around the world, from historical places to
           natural wonders.
         </p>
@@ -61,7 +61,7 @@
     <section class="py-7">
       <UContainer class="container">
         <h3 class="mb-3 text-3xl font-bold tracking-wide">Special Offer</h3>
-        <p class="text-gray-500">Check out our special offer and discounts</p>
+        <p class="text-gray-600">Check out our special offer and discounts</p>
       </UContainer>
 
       <div class="swiper-free-mode-container my-10">
@@ -88,14 +88,14 @@
                 />
               </div>
               <div class="bg-white p-5">
-                <div class="flex items-center gap-3 text-gray-500">
+                <div class="flex items-center gap-3 text-gray-600">
                   <svg-marker />
                   <p>{{ slide.location }}</p>
                 </div>
                 <h4 class="mb-3 line-clamp-1 text-2xl font-medium">
                   {{ slide.title }}
                 </h4>
-                <div class="flex items-center gap-3 text-gray-500">
+                <div class="flex items-center gap-3 text-gray-600">
                   <div class="flex items-center gap-1 text-amber-400">
                     <svg-star v-for="star in slide.star" :key="star" />
                   </div>
@@ -110,10 +110,10 @@
                     <p>{{ slide.duration }} Day(s)</p>
                   </div>
                   <div class="text-right">
-                    <p class="text-sm text-gray-500 line-through">
+                    <p class="text-sm text-gray-600 line-through">
                       {{ price(slide.price) }}
                     </p>
-                    <p class="text-2xl font-medium text-sorbus-600">
+                    <p class="text-2xl font-medium text-sorbus-700">
                       {{ price(slide.discountPrice) }}
                     </p>
                   </div>
@@ -132,7 +132,7 @@
         <h3 class="mb-3 text-3xl font-bold tracking-wide">
           Destination Gallery
         </h3>
-        <p class="text-gray-500">Our photo gallery on trip</p>
+        <p class="text-gray-600">Our photo gallery on trip</p>
       </UContainer>
 
       <div class="my-10">

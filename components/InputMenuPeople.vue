@@ -5,6 +5,8 @@
     value-attribute="value"
     option-attribute="label"
     v-bind="$attrs"
+    aria-label="Select number of people"
+    name="people"
   />
 </template>
 
