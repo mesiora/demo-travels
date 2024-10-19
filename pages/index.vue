@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <Hero />
 
     <section class="overflow-hidden py-7">

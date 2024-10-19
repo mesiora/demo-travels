@@ -6,6 +6,7 @@ export default defineAppConfig({
         color: 'sorbus',
       },
       padding: {
+        md: 'px-4 py-3',
         lg: 'px-6 py-4',
         xl: 'px-6 py-4',
       },
@@ -13,6 +14,7 @@ export default defineAppConfig({
     },
     input: {
       padding: {
+        md: 'px-4 py-3',
         lg: 'px-6 py-4',
         xl: 'px-6 py-4',
       },

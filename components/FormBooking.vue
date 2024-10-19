@@ -3,7 +3,7 @@
     id="form-booking"
     class="z-50 mx-10 w-full rounded-2xl bg-white p-8 shadow-lg shadow-slate-100 xl:mx-0"
     :class="{
-      'bottom-hang absolute top-full -translate-y-1/2': bottomHang,
+      'bottom-hang absolute left-0 top-full -translate-y-1/2': bottomHang,
     }"
   >
     <ui class="flex list-none divide-x divide-gray-200 font-semibold leading-8">

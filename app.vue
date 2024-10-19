@@ -68,4 +68,10 @@ a {
     }
   }
 }
+
+.page {
+  section:last-child {
+    @apply pb-32;
+  }
+}
 </style>
