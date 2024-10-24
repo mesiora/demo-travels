@@ -1,18 +1,18 @@
 <template>
   <form
     id="form-subscribe"
-    class="z-50 mx-10 w-full rounded-2xl bg-white px-8 py-16 xl:mx-0"
+    class="z-50 mx-10 w-[calc(100%-5rem)] rounded-2xl bg-white px-8 py-16 xl:mx-0 xl:w-full"
     :class="{
       'top-hang absolute bottom-full left-0 translate-y-4': topHang,
     }"
   >
-    <div class="grid grid-cols-12 items-center gap-6">
-      <div class="col-span-3">
+    <div class="flex items-center gap-4 xl:gap-6">
+      <div class="w-2/12">
         <span
           class="block h-24 w-24 border border-dashed border-gray-300"
         ></span>
       </div>
-      <div class="col-span-9">
+      <div class="w-10/12">
         <div class="flex gap-6 text-black">
           <div class="flex flex-col justify-between">
             <h4 class="text-4xl font-bold leading-tight">

@@ -1,8 +1,8 @@
 <template>
-  <header class="fixed left-0 top-0 z-[100] w-full text-sm">
+  <header class="fixed left-0 top-0 z-[100] w-screen text-sm">
     <UContainer class="container">
       <nav class="grid grid-cols-7 gap-4 p-7 text-white xl:px-0">
-        <div class="col-span-3 flex items-center gap-8">
+        <div class="col-span-3 hidden items-center gap-8 lg:flex">
           <NuxtLink
             to="#form-booking"
             class="flex items-center gap-1"
@@ -36,21 +36,28 @@
             })
           "
           aria-label="Home"
-          class="col-span-1 text-center"
+          class="text-center lg:col-span-1"
         >
-          <svg-logo class="logo mx-auto !mb-0 text-[110px]" />
+          <svg-logo-sm
+            class="logo mx-auto !mb-0 block text-[110px] sm:hidden"
+          />
+          <svg-logo class="logo mx-auto !mb-0 hidden text-[110px] sm:block" />
         </NuxtLink>
 
-        <div class="col-span-3 flex items-center justify-end gap-8">
+        <div
+          class="col-span-6 flex items-center justify-end gap-4 md:gap-8 lg:col-span-3"
+        >
           <!-- <ColorMode /> -->
 
           <LanguageSwitcher />
 
-          <NuxtLink to="/" class="flex items-center gap-1"> Login </NuxtLink>
+          <NuxtLink to="/" class="hidden items-center gap-1 sm:flex">
+            Login
+          </NuxtLink>
 
           <UButton
             variant="solid"
-            class="font-semibold transition-colors hover:bg-sorbus-500 hover:text-white"
+            class="hidden font-semibold transition-colors hover:bg-sorbus-500 hover:text-white sm:block"
             color="white"
             size="lg"
           >

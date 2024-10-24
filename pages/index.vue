@@ -64,11 +64,21 @@
         <p class="text-gray-600">Check out our special offer and discounts</p>
       </UContainer>
 
-      <div class="swiper-free-mode-container my-10">
+      <div class="swiper-free-mode-container gap my-10">
         <Swiper
           :modules="[SwiperFreeMode]"
-          :slides-per-view="4"
-          :space-between="30"
+          :slides-per-view="2"
+          :space-between="20"
+          :breakpoints="{
+            '768': {
+              slidesPerView: 3,
+              spaceBetween: 25,
+            },
+            '1280': {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }"
           :free-mode="true"
         >
           <SwiperSlide
@@ -80,7 +90,9 @@
             }"
           >
             <div class="relative overflow-hidden rounded-3xl">
-              <div class="relative aspect-square h-[16vw]">
+              <div
+                class="relative aspect-square h-[30vw] lg:h-[20vw] xl:h-[16vw]"
+              >
                 <img
                   :src="slide.image"
                   class="absolute h-full w-full object-cover"
@@ -153,7 +165,9 @@
             :key="index"
             class="cursor-pointer"
           >
-            <div class="relative aspect-square h-[16vw] overflow-hidden">
+            <div
+              class="relative aspect-square h-[22vw] overflow-hidden lg:h-[19vw] xl:h-[16vw]"
+            >
               <img
                 :src="slide"
                 class="absolute h-full w-full object-cover"

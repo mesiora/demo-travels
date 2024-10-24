@@ -5,13 +5,17 @@
         class="relative flex h-full w-full items-center justify-center"
       >
         <div class="text-center text-white">
-          <h2 class="font-prompt text-[45px] font-light tracking-wide">
+          <h2
+            class="font-prompt text-[30px] font-light tracking-wide sm:text-[40px] md:text-[44px]"
+          >
             Helping Others
           </h2>
-          <h1 class="font-prompt text-[80px] font-medium tracking-wide">
+          <h1
+            class="font-prompt text-[46px] font-medium tracking-wide sm:text-[64px] md:text-[80px]"
+          >
             LIVE & TRAVEL
           </h1>
-          <h3 class="text-xl">
+          <h3 class="sm:text-xl">
             Exploring new places is a great way to relax and clear your mind.
           </h3>
         </div>
@@ -29,11 +33,19 @@
   background-image: url('~/assets/images/hero.webp');
   background-size: cover;
   background-position: center center;
-  height: calc(100vh - 80px);
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @screen md {
+    height: 75vh;
+  }
+
+  @screen lg {
+    height: calc(100vh - 80px);
+  }
 
   &::before {
     content: '';
@@ -50,18 +62,6 @@
     );
     border-radius: 20px;
     z-index: 0;
-  }
-}
-
-@screen md {
-  #hero {
-    height: 75vh;
-  }
-}
-
-@screen lg {
-  #hero {
-    height: 70vh;
   }
 }
 </style>
