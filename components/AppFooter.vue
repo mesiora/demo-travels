@@ -3,13 +3,46 @@
     <UContainer class="container relative">
       <Subscribe top-hang />
       <!-- <FormBooking bottom-hang /> -->
-      <div class="flex justify-between pt-14">
-        <div>
-          <NuxtLink to="/"> © 2021 Travel Agency </NuxtLink>
+      <div
+        class="flex flex-col items-center justify-between gap-4 pt-14 md:flex-row"
+      >
+        <div class="order-3 md:order-1">
+          © 2021
+          <NuxtLink to="https://github.com/medusiora" target="_blank">
+            Medusiora
+          </NuxtLink>
         </div>
-        <div class="flex gap-5">
+        <div class="order-2 md:order-3">
+          <UButton
+            color="white"
+            size="xs"
+            variant="link"
+            icon="i-simple-icons-facebook"
+          />
+          <UButton
+            color="white"
+            size="xs"
+            variant="link"
+            icon="i-simple-icons-instagram"
+          />
+          <UButton
+            color="white"
+            size="xs"
+            variant="link"
+            icon="i-simple-icons-x"
+          />
+          <UButton
+            color="white"
+            size="xs"
+            variant="link"
+            icon="i-simple-icons-mailboxdotorg"
+          />
+        </div>
+        <div
+          class="order-2 flex flex-col items-center gap-3 sm:flex-row md:order-2 md:gap-5"
+        >
           <NuxtLink to="/"> Cookies Policy </NuxtLink>
-          <NuxtLink to="/"> Inside auto layout </NuxtLink>
+          <NuxtLink to="/"> Terms </NuxtLink>
           <NuxtLink to="/"> Privacy Policy </NuxtLink>
         </div>
       </div>

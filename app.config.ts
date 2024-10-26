@@ -1,10 +1,10 @@
 export default defineAppConfig({
   ui: {
-    primary: 'red',
+    primary: 'sorbus',
     button: {
-      default: {
-        color: 'sorbus',
-      },
+      // default: {
+      //   color: 'sorbus',
+      // },
       padding: {
         md: 'px-4 py-3',
         lg: 'px-6 py-4',

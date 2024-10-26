@@ -13,7 +13,7 @@
         </p>
       </UContainer>
 
-      <div class="swiper-free-mode-container my-4 xl:my-10">
+      <div class="swiper-free-mode-container my-4 md:my-6 xl:my-10">
         <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="2"
@@ -50,11 +50,13 @@
                 class="card-gradient absolute inset-0 flex items-end justify-center"
               >
                 <div class="w-full p-5 text-white">
-                  <h4 class="mb-1 text-xl font-medium xl:mb-3 xl:text-2xl">
+                  <h4
+                    class="mb-1 text-xl font-medium md:mb-2 md:text-2xl xl:mb-3"
+                  >
                     {{ slide.title }}
                   </h4>
                   <div
-                    class="flex items-center gap-1 text-sm xl:gap-3 xl:text-xl"
+                    class="flex items-center gap-1 text-sm md:text-base xl:gap-3 xl:text-xl"
                   >
                     <svg-marker class="text-sm xl:text-xl" />
                     <p>{{ slide.location }}</p>
@@ -76,7 +78,7 @@
         <p class="text-gray-600">Check out our special offer and discounts</p>
       </UContainer>
 
-      <div class="swiper-free-mode-container my-4 xl:my-10">
+      <div class="swiper-free-mode-container my-4 md:my-6 xl:my-10">
         <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="2"
@@ -103,7 +105,7 @@
           >
             <div class="relative overflow-hidden rounded-3xl">
               <div
-                class="relative aspect-square h-36 md:h-[30vw] lg:h-[20vw] xl:h-[16vw]"
+                class="relative aspect-square h-36 md:h-[25vw] lg:h-[20vw] xl:h-[16vw]"
               >
                 <img
                   :src="slide.image"
@@ -176,7 +178,7 @@
         <p class="text-gray-600">Our photo gallery on trip</p>
       </UContainer>
 
-      <div class="my-10">
+      <div class="my-4 md:my-6 xl:my-10">
         <Swiper
           :modules="[SwiperFreeMode, SwiperAutoplay]"
           :slides-per-view="3"

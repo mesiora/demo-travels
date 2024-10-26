@@ -1,7 +1,7 @@
 <template>
   <header class="fixed left-0 top-0 z-[100] w-screen text-sm">
     <UContainer class="container">
-      <nav class="grid grid-cols-7 gap-4 p-7 text-white xl:px-0">
+      <nav class="grid grid-cols-7 gap-4 px-4 py-7 text-white sm:px-7 xl:px-0">
         <div class="col-span-3 hidden items-center gap-8 lg:flex">
           <NuxtLink
             to="#form-booking"
@@ -45,24 +45,56 @@
         </NuxtLink>
 
         <div
-          class="col-span-6 flex items-center justify-end gap-4 md:gap-8 lg:col-span-3"
+          class="col-span-6 flex items-center justify-end gap-2 md:gap-8 lg:col-span-3"
         >
           <!-- <ColorMode /> -->
 
           <LanguageSwitcher />
 
-          <NuxtLink to="/" class="hidden items-center gap-1 sm:flex">
+          <NuxtLink to="/" class="hidden items-center gap-1 sm:inline-block">
             Login
           </NuxtLink>
 
           <UButton
             variant="solid"
-            class="hidden font-semibold transition-colors hover:bg-sorbus-500 hover:text-white sm:block"
+            class="hidden font-semibold sm:inline-block"
             color="white"
             size="lg"
           >
             Sign Up
           </UButton>
+
+          <!-- Tools for small screen -->
+          <UDropdown
+            class="inline-block sm:hidden"
+            :items="menus"
+            :ui="{ item: { disabled: 'cursor-text select-text' } }"
+            :popper="{ placement: 'bottom-start' }"
+          >
+            <UButton
+              color="white"
+              variant="link"
+              icon="i-heroicons-bars-3-bottom-left-16-solid"
+            />
+
+            <template #account="{ item }">
+              <div class="text-left">
+                <p>{{ item.label }}</p>
+                <p class="truncate text-xs text-gray-400 dark:text-gray-500">
+                  How can we help you today?
+                </p>
+              </div>
+            </template>
+
+            <template #item="{ item }">
+              <span class="truncate">{{ item.label }}</span>
+
+              <UIcon
+                :name="item.icon"
+                class="ms-auto h-4 w-4 flex-shrink-0 text-gray-400 dark:text-gray-500"
+              />
+            </template>
+          </UDropdown>
         </div>
       </nav>
     </UContainer>
@@ -72,6 +104,26 @@
 <script lang="ts" setup>
 const localeRoute = useLocaleRoute()
 const router = useRouter()
+
+const menus = [
+  [
+    {
+      label: 'MY SITE',
+      slot: 'account',
+      disabled: true,
+    },
+  ],
+  [
+    {
+      label: 'Login',
+      icon: 'i-heroicons-arrow-left-on-rectangle',
+    },
+    {
+      label: 'Sign up',
+      icon: 'i-heroicons-rectangle-group',
+    },
+  ],
+]
 
 function setHeaderOverlay() {
   const header = document.querySelector('header')

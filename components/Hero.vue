@@ -33,17 +33,27 @@
   background-image: url('~/assets/images/hero.webp');
   background-size: cover;
   background-position: center center;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 
+  @media (min-width: 376px) {
+    height: 65vh;
+    @apply landscape:h-[40rem];
+  }
+
   @screen md {
-    height: 75vh;
+    height: 70vh;
+    @apply landscape:h-[40rem];
   }
 
   @screen lg {
+    height: 80vh;
+  }
+
+  @screen xl {
     height: calc(100vh - 80px);
   }
 
