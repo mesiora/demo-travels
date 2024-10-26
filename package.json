@@ -16,16 +16,16 @@
     "date-fns": "^4.1.0",
     "nuxt-swiper": "^1.2.2",
     "v-calendar": "^3.1.2",
-    "vue": "^3.5.10",
+    "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.5.7",
-    "@nuxt/icon": "^1.5.4",
-    "@nuxt/ui": "^2.18.6",
+    "@nuxt/icon": "^1.5.8",
+    "@nuxt/ui": "^2.18.7",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.5.5",
-    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@nuxtjs/tailwindcss": "^6.12.2",
     "@vueuse/core": "^11.1.0",
     "@vueuse/nuxt": "^11.1.0",
     "nuxt": "^3.13.2",
@@ -35,8 +35,8 @@
     "postcss-nested": "^6.2.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2"
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   },
   "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"
 }
