@@ -66,9 +66,11 @@ const animateTrailSize = (isHover: boolean) => {
   if (!trail.value) return
 
   const size = isHover ? config.hoverSize : config.normalSize
+
   $gsap.to(trail.value, {
     width: `${size}px`,
     height: `${size}px`,
+    background: isHover ? 'rgba(245 124 0, 0.6)' : 'rgba(245 124 0, 0.1)',
     duration: 0.3,
     ease: 'power2.out',
   })
@@ -153,7 +155,7 @@ watch(visibility, (value) => {
 })
 </script>
 
-<style scoped>
+<style>
 .mouse-trail {
   width: v-bind('`${config.normalSize}px`');
   height: v-bind('`${config.normalSize}px`');
@@ -163,14 +165,15 @@ watch(visibility, (value) => {
   border-radius: 50%;
   pointer-events: none;
   z-index: 1000;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   will-change: transform, width, height;
 }
 
 .mouse-trail-inner {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
+  /* background: #f57c00; */
   border-radius: inherit;
   transform: scale(0.9);
   transition: transform 0.2s ease-out;
