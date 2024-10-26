@@ -7,60 +7,71 @@
         bottomHang,
     }"
   >
-    <nav
-      class="flex list-none divide-x divide-gray-200 font-semibold leading-8"
-    >
-      <div>
-        <NuxtLink
-          to="javascript:void(0)"
-          class="primary ml-0 mr-3 flex items-center gap-1 text-sm sm:mr-4 sm:text-base"
+    <ul class="flex list-none divide-x divide-gray-200 font-semibold leading-8">
+      <li>
+        <div
+          class="link primary ml-0 mr-3 flex items-center gap-1 text-sm sm:mr-4 sm:text-base"
           :class="{ active: activeTab === 0 }"
           @click="activeTab = 0"
         >
           <svg-flag class="text-sm sm:text-base" />
           Package
-        </NuxtLink>
-      </div>
-      <div>
-        <NuxtLink
-          to="javascript:void(0)"
-          class="primary mx-3 flex items-center gap-1 text-sm sm:mx-4 sm:text-base"
+        </div>
+      </li>
+      <li>
+        <div
+          class="link primary mx-3 flex items-center gap-1 text-sm sm:mx-4 sm:text-base"
           :class="{ active: activeTab === 1 }"
           @click="activeTab = 1"
         >
           <svg-airplane class="text-sm sm:text-base" />
           Flights
-        </NuxtLink>
-      </div>
-      <div>
-        <NuxtLink
-          to="javascript:void(0)"
-          class="primary mx-3 flex items-center gap-1 text-sm sm:mx-4 sm:text-base"
+        </div>
+      </li>
+      <li>
+        <div
+          class="link primary mx-3 flex items-center gap-1 text-sm sm:mx-4 sm:text-base"
           :class="{ active: activeTab === 2 }"
           @click="activeTab = 2"
         >
           <svg-bed class="text-sm sm:text-base" />
           Hotel
-        </NuxtLink>
-      </div>
-    </nav>
+        </div>
+      </li>
+    </ul>
 
     <div class="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-3 xl:gap-6">
-      <InputMenuLocation :size="btnSize" class="col-span-2 lg:col-span-1" />
+      <InputMenuLocation
+        :size="btnSize"
+        class="col-span-2 lg:col-span-1"
+        id="location"
+        name="location"
+      />
 
       <DateRangePicker
         :size="btnSize"
         block
         color="white"
         class="col-span-2 md:col-span-1"
+        id="date"
+        name="date"
       />
 
       <div
         class="col-span-2 flex flex-col gap-3 sm:flex-row md:col-span-1 xl:gap-6"
       >
-        <InputMenuPeople :size="btnSize" class="flex-1" />
+        <InputMenuPeople
+          :size="btnSize"
+          class="flex-1"
+          id="people"
+          name="people"
+        />
 
-        <UButton class="justify-center font-semibold" :size="btnSize">
+        <UButton
+          class="justify-center font-semibold"
+          :size="btnSize"
+          aria-label="Search"
+        >
           SEARCH
         </UButton>
       </div>

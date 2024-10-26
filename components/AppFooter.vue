@@ -18,24 +18,28 @@
             size="xs"
             variant="link"
             icon="i-simple-icons-facebook"
+            aria-label="Facebook"
           />
           <UButton
             color="white"
             size="xs"
             variant="link"
             icon="i-simple-icons-instagram"
+            aria-label="Instagram"
           />
           <UButton
             color="white"
             size="xs"
             variant="link"
             icon="i-simple-icons-x"
+            aria-label="Twitter"
           />
           <UButton
             color="white"
             size="xs"
             variant="link"
             icon="i-simple-icons-mailboxdotorg"
+            aria-label="Email"
           />
         </div>
         <div

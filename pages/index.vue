@@ -103,7 +103,9 @@
               'swiper-slide-0': index === 0,
             }"
           >
-            <div class="group relative overflow-hidden rounded-3xl">
+            <div
+              class="group relative overflow-hidden rounded-3xl bg-white shadow"
+            >
               <div
                 class="relative aspect-square h-36 overflow-hidden md:h-[25vw] lg:h-[20vw] xl:h-[16vw]"
               >
@@ -113,7 +115,7 @@
                   alt="Special Offer"
                 />
               </div>
-              <div class="bg-white p-5">
+              <div class="p-5">
                 <div
                   class="flex items-center gap-1 text-sm text-gray-600 xl:gap-3 xl:text-base"
                 >

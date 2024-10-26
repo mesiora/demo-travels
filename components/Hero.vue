@@ -1,8 +1,14 @@
 <template>
   <section class="relative p-4 xl:p-7">
-    <div id="hero" class="rounded-3xl">
+    <div id="hero">
+      <img
+        :src="Hero"
+        class="absolute h-full w-full overflow-hidden rounded-3xl object-cover"
+        alt="Japan"
+      />
+
       <UContainer
-        class="relative flex h-full w-full items-center justify-center"
+        class="relative z-20 flex h-full w-full items-center justify-center"
       >
         <div class="text-center text-white">
           <h2
@@ -15,9 +21,9 @@
           >
             LIVE & TRAVEL
           </h1>
-          <h3 class="sm:text-xl">
+          <h2 class="sm:text-xl">
             Exploring new places is a great way to relax and clear your mind.
-          </h3>
+          </h2>
         </div>
 
         <FormBooking bottom-hang />
@@ -26,13 +32,12 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Hero from '~/assets/images/hero.webp'
+</script>
 
 <style lang="postcss">
 #hero {
-  background-image: url('~/assets/images/hero.webp');
-  background-size: cover;
-  background-position: center center;
   height: 75vh;
   display: flex;
   justify-content: center;
@@ -71,7 +76,7 @@
       rgba(0, 0, 0, 0) 100%
     );
     border-radius: 20px;
-    z-index: 0;
+    z-index: 10;
   }
 }
 </style>

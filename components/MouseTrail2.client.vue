@@ -9,6 +9,9 @@ const isHovering = ref(false)
 
 onMounted(() => {
   nextTick(() => {
+    // Disable if touch device
+    if ('ontouchstart' in window) return
+
     // Mouse Cursor Animation
     $gsap.set('.mouse-trail', {
       xPercent: -50,

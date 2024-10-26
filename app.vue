@@ -30,7 +30,8 @@ html {
   }
 }
 
-a {
+a,
+.link {
   text-decoration: none !important;
   @apply relative;
 

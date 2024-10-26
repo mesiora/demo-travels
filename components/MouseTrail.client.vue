@@ -119,6 +119,9 @@ const cleanup = () => {
 // Lifecycle hooks
 onMounted(() => {
   nextTick(() => {
+    // Disable if touch device
+    if ('ontouchstart' in window) return
+
     // Initialize mouse position
     trailPosition.x = window.innerWidth / 2
     trailPosition.y = window.innerHeight / 2
