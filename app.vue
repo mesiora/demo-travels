@@ -2,7 +2,7 @@
   <NuxtLayout>
     <NuxtLoadingIndicator />
     <NuxtPage />
-    <MouseTrail />
+    <MouseTrail2 />
   </NuxtLayout>
 </template>
 
