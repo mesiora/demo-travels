@@ -1,5 +1,5 @@
 <template>
-  <section class="relative p-7">
+  <section class="relative p-4 xl:p-7">
     <div id="hero" class="rounded-3xl">
       <UContainer
         class="relative flex h-full w-full items-center justify-center"

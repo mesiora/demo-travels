@@ -71,7 +71,7 @@ a {
 
 .page {
   section:last-child {
-    @apply pb-32;
+    @apply pb-60 xl:pb-32;
   }
 }
 </style>

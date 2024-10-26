@@ -54,4 +54,19 @@ watch(
     immediate: true,
   },
 )
+
+// function updateSwiper() {
+//   swiper.value.update()
+// }
+
+// // on window resize, update the swiper
+// onMounted(() => {
+//   nextTick(() => {
+//     window.addEventListener('resize', updateSwiper)
+//   })
+// })
+
+// onUnmounted(() => {
+//   window.removeEventListener('resize', updateSwiper)
+// })
 </script>

@@ -13,11 +13,21 @@
         </p>
       </UContainer>
 
-      <div class="swiper-free-mode-container my-10">
+      <div class="swiper-free-mode-container my-4 xl:my-10">
         <Swiper
           :modules="[SwiperFreeMode]"
-          :slides-per-view="3"
-          :space-between="30"
+          :slides-per-view="2"
+          :space-between="16"
+          :breakpoints="{
+            '768': {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            '1280': {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }"
           :free-mode="true"
         >
           <SwiperSlide
@@ -29,7 +39,7 @@
             }"
           >
             <div
-              class="relative aspect-square h-[29vw] overflow-hidden rounded-3xl"
+              class="relative aspect-square h-60 overflow-hidden rounded-3xl sm:h-96 md:h-[40vw] lg:h-[35vw] xl:h-[29vw]"
             >
               <img
                 :src="slide.image"
@@ -40,11 +50,13 @@
                 class="card-gradient absolute inset-0 flex items-end justify-center"
               >
                 <div class="w-full p-5 text-white">
-                  <h4 class="mb-3 text-2xl font-medium">
+                  <h4 class="mb-1 text-xl font-medium xl:mb-3 xl:text-2xl">
                     {{ slide.title }}
                   </h4>
-                  <div class="flex items-center gap-3 text-xl">
-                    <svg-marker />
+                  <div
+                    class="flex items-center gap-1 text-sm xl:gap-3 xl:text-xl"
+                  >
+                    <svg-marker class="text-sm xl:text-xl" />
                     <p>{{ slide.location }}</p>
                   </div>
                 </div>
@@ -64,15 +76,15 @@
         <p class="text-gray-600">Check out our special offer and discounts</p>
       </UContainer>
 
-      <div class="swiper-free-mode-container gap my-10">
+      <div class="swiper-free-mode-container my-4 xl:my-10">
         <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="2"
-          :space-between="20"
+          :space-between="16"
           :breakpoints="{
             '768': {
               slidesPerView: 3,
-              spaceBetween: 25,
+              spaceBetween: 20,
             },
             '1280': {
               slidesPerView: 4,
@@ -91,7 +103,7 @@
           >
             <div class="relative overflow-hidden rounded-3xl">
               <div
-                class="relative aspect-square h-[30vw] lg:h-[20vw] xl:h-[16vw]"
+                class="relative aspect-square h-36 md:h-[30vw] lg:h-[20vw] xl:h-[16vw]"
               >
                 <img
                   :src="slide.image"
@@ -100,32 +112,48 @@
                 />
               </div>
               <div class="bg-white p-5">
-                <div class="flex items-center gap-3 text-gray-600">
-                  <svg-marker />
+                <div
+                  class="flex items-center gap-1 text-sm text-gray-600 xl:gap-3 xl:text-base"
+                >
+                  <svg-marker class="text-sm xl:text-base" />
                   <p>{{ slide.location }}</p>
                 </div>
-                <h4 class="mb-3 line-clamp-1 text-2xl font-medium">
+                <h4
+                  class="mb-1 line-clamp-2 text-xl font-medium xl:mb-3 xl:line-clamp-1 xl:text-2xl"
+                >
                   {{ slide.title }}
                 </h4>
-                <div class="flex items-center gap-3 text-gray-600">
-                  <div class="flex items-center gap-1 text-amber-400">
-                    <svg-star v-for="star in slide.star" :key="star" />
+                <div
+                  class="flex flex-col gap-1 text-gray-600 xl:flex-row xl:items-center xl:gap-3"
+                >
+                  <div class="flex items-center text-amber-400 xl:gap-1">
+                    <svg-star
+                      v-for="star in slide.star"
+                      :key="star"
+                      class="text-sm xl:text-base"
+                    />
                   </div>
                   <p class="text-xs">{{ slide.review }} Reviews</p>
                 </div>
-                <div class="my-6 line-clamp-4">
+                <div
+                  class="my-2 line-clamp-3 text-sm xl:my-6 xl:line-clamp-4 xl:text-base"
+                >
                   <p>{{ slide.description }}</p>
                 </div>
-                <div class="flex justify-between gap-3">
-                  <div class="flex items-center gap-3">
-                    <svg-clock class="text-white" />
+                <div
+                  class="flex flex-col justify-between gap-1 xl:flex-row xl:gap-3"
+                >
+                  <div
+                    class="flex items-center gap-1 text-xs xl:gap-3 xl:text-base"
+                  >
+                    <svg-clock class="text-white xl:text-base" />
                     <p>{{ slide.duration }} Day(s)</p>
                   </div>
-                  <div class="text-right">
+                  <div class="xl:text-right">
                     <p class="text-sm text-gray-600 line-through">
                       {{ price(slide.price) }}
                     </p>
-                    <p class="text-2xl font-medium text-sorbus-700">
+                    <p class="text-lg font-medium text-sorbus-700 xl:text-2xl">
                       {{ price(slide.discountPrice) }}
                     </p>
                   </div>
@@ -139,6 +167,7 @@
         </Swiper>
       </div>
     </section>
+
     <section class="py-7">
       <UContainer class="container">
         <h3 class="mb-3 text-3xl font-bold tracking-wide">
@@ -166,7 +195,7 @@
             class="cursor-pointer"
           >
             <div
-              class="relative aspect-square h-[22vw] overflow-hidden lg:h-[19vw] xl:h-[16vw]"
+              class="relative aspect-square h-32 overflow-hidden md:h-[22vw] lg:h-[19vw] xl:h-[16vw]"
             >
               <img
                 :src="slide"
@@ -193,6 +222,10 @@ import ISO3 from '~/assets/images/so-3.webp'
 import IDG1 from '~/assets/images/dg-1.webp'
 import IDG2 from '~/assets/images/dg-2.webp'
 import IDG3 from '~/assets/images/dg-3.webp'
+
+const { width: wWidth } = useWindowSize()
+
+const isSmallScreen = computed(() => wWidth.value < 1025)
 
 const popularDestinations = [
   {
@@ -278,17 +311,25 @@ const destinationGallery = [
 onMounted(() => {
   nextTick(() => {
     setSwiperWidth()
-    window.addEventListener('resize', setSwiperWidth)
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        setSwiperWidth()
+      }, 100)
+    })
   })
 })
 
 onUnmounted(() => {
-  window.removeEventListener('resize', setSwiperWidth)
+  window.removeEventListener('resize', () => {
+    setTimeout(() => {
+      setSwiperWidth()
+    }, 100)
+  })
 })
 
 function setSwiperWidth() {
-  const container = document.querySelector('.container') as HTMLElement
   const body = document.querySelector('body') as HTMLElement
+  const container = document.querySelector('.container') as HTMLElement
 
   if (!container || !body) return
 
@@ -308,7 +349,7 @@ function setSwiperWidth() {
 }
 
 function price(price: number) {
-  return price.toLocaleString('en-US', {
+  return price.toLocaleString('th-TH', {
     style: 'currency',
     currency: 'THB',
   })
