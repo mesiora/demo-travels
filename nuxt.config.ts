@@ -4,6 +4,8 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  ssr: false,
+
   nitro: {
     static: true,
   },
@@ -36,6 +38,7 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     '@nuxt/icon',
     'nuxt-swiper',
+    '@hypernym/nuxt-gsap',
     '@nuxt/eslint',
   ],
 

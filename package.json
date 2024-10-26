@@ -12,6 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@hypernym/nuxt-gsap": "^2.4.3",
     "date-fns": "^4.1.0",
     "nuxt-swiper": "^1.2.2",
     "v-calendar": "^3.1.2",

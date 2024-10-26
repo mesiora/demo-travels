@@ -39,11 +39,11 @@
             }"
           >
             <div
-              class="relative aspect-square h-60 overflow-hidden rounded-3xl sm:h-96 md:h-[40vw] lg:h-[35vw] xl:h-[29vw]"
+              class="group relative aspect-square h-60 overflow-hidden rounded-3xl sm:h-96 md:h-[40vw] lg:h-[35vw] xl:h-[29vw]"
             >
               <img
                 :src="slide.image"
-                class="absolute h-full w-full object-cover"
+                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 alt="Popular Destination"
               />
               <div
@@ -103,13 +103,13 @@
               'swiper-slide-0': index === 0,
             }"
           >
-            <div class="relative overflow-hidden rounded-3xl">
+            <div class="group relative overflow-hidden rounded-3xl">
               <div
-                class="relative aspect-square h-36 md:h-[25vw] lg:h-[20vw] xl:h-[16vw]"
+                class="relative aspect-square h-36 overflow-hidden md:h-[25vw] lg:h-[20vw] xl:h-[16vw]"
               >
                 <img
                   :src="slide.image"
-                  class="absolute h-full w-full object-cover"
+                  class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   alt="Special Offer"
                 />
               </div>
@@ -194,7 +194,6 @@
           <SwiperSlide
             v-for="(slide, index) in destinationGallery"
             :key="index"
-            class="cursor-pointer"
           >
             <div
               class="relative aspect-square h-32 overflow-hidden md:h-[22vw] lg:h-[19vw] xl:h-[16vw]"
