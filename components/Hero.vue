@@ -36,11 +36,13 @@
 
 <script lang="ts" setup>
 import Hero from '~/assets/images/hero.webp'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const { $gsap } = useNuxtApp()
 
 // Initialize animations
 onMounted(() => {
-  // $gsap.registerPlugin($ScrollTrigger)
+  // $gsap.registerPlugin(ScrollTrigger)
 
   // Create a timeline
   const tl = $gsap.timeline({
@@ -49,54 +51,50 @@ onMounted(() => {
     },
   })
 
-  // tl.from('#hero-image-container', {
-  //   duration: 1,
-  //   opacity: 0,
-  // })
-  tl.from('.nav-menu', {
-    duration: 0.6,
+  tl.from('.nav-menu, .form-booking', {
+    duration: 1,
     opacity: 0,
   })
   tl.from(
     '.subtitle1',
     {
-      duration: 0.6,
+      duration: 1,
       y: 10,
       opacity: 0,
     },
-    '-=0.5',
+    '-=0.7',
   )
   tl.from(
     '.main-title',
     {
-      duration: 0.6,
+      duration: 1,
       y: 10,
       opacity: 0,
     },
-    '-=0.5',
+    '-=0.7',
   )
   tl.from(
-    '.subtitle-2, .form-booking',
+    '.subtitle-2',
     {
-      duration: 0.6,
+      duration: 1,
       y: 10,
       opacity: 0,
     },
-    '-=0.5',
+    '-=0.7',
   )
 
   // Parallax effect for the hero image
-  // $gsap.to('.hero-image', {
-  //   yPercent: 30,
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: '#hero-image-container',
-  //     start: 'top top',
-  //     end: 'bottom top',
-  //     scrub: true,
-  //     invalidateOnRefresh: true,
-  //   },
-  // })
+  $gsap.to('.hero-image', {
+    yPercent: 30,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero-image-container',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  })
 })
 </script>
 
