@@ -3,6 +3,7 @@
     v-if="date && typeof date === 'object'"
     v-model.range="date"
     :columns="2"
+    :locale="locale"
     v-bind="{ ...attrs, ...$attrs }"
   />
   <VCalendarDatePicker v-else v-model="date" v-bind="{ ...attrs, ...$attrs }" />
@@ -15,6 +16,8 @@ import type {
   DatePickerDate,
   DatePickerRangeObject,
 } from 'v-calendar/dist/types/src/use/datePicker.js'
+
+const { locale } = useI18n()
 
 const props = defineProps({
   modelValue: {
@@ -72,5 +75,6 @@ const attrs = {
   --vc-accent-700: rgb(var(--color-primary-700));
   --vc-accent-800: rgb(var(--color-primary-800));
   --vc-accent-900: rgb(var(--color-primary-900));
+  @apply font-sans;
 }
 </style>

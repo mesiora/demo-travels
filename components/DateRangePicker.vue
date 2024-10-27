@@ -35,14 +35,16 @@
 <script setup lang="ts">
 import { add, format, isSameDay, type Duration } from 'date-fns'
 
+const { t } = useI18n()
+
 const ranges = [
-  { label: 'Next 2 days', duration: { days: 2 } },
-  { label: 'Next 7 days', duration: { days: 7 } },
-  { label: 'Next 14 days', duration: { days: 14 } },
-  { label: 'Next 30 days', duration: { days: 30 } },
-  { label: 'Next 3 months', duration: { months: 3 } },
-  { label: 'Next 6 months', duration: { months: 6 } },
-  { label: 'Next year', duration: { years: 1 } },
+  { label: t('next-2-days'), duration: { days: 2 } },
+  { label: t('next-7-days'), duration: { days: 7 } },
+  { label: t('next-14-days'), duration: { days: 14 } },
+  { label: t('next-30-days'), duration: { days: 30 } },
+  { label: t('next-3-months'), duration: { months: 3 } },
+  { label: t('next-6-months'), duration: { months: 6 } },
+  { label: t('next-year'), duration: { years: 1 } },
 ]
 const selected = ref({
   start: add(new Date(), { days: 1 }),

@@ -18,24 +18,24 @@
         <div class="flex flex-col gap-6 text-black md:flex-row">
           <div class="flex flex-col justify-between">
             <h4 class="text-3xl font-bold leading-tight lg:text-4xl">
-              Subscribe <br />
-              Newsletter
+              {{ $t('subscribe-newsletter') }}
             </h4>
           </div>
           <div class="flex-1">
-            <h5 class="text-xl font-semibold text-gray-600">The Travel</h5>
+            <h5 class="text-xl font-semibold text-gray-600">
+              {{ $t('the-travel') }}
+            </h5>
             <p class="text-gray-600">
-              Get inspired! Receive our travel discounts, Tip behind the scene
-              stories.
+              {{ $t('the-travel-subtitle') }}
             </p>
             <div class="mt-3 flex gap-4">
               <UInput
                 type="email"
-                placeholder="Enter your email"
+                :placeholder="$t('enter-your-email')"
                 class="flex-1"
                 size="md"
               />
-              <UButton size="md" color="black">Subscribe</UButton>
+              <UButton size="md" color="black">{{ $t('subscribe') }}</UButton>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@
             @click="scrollToForm(0)"
           >
             <svg-flag class="text-base" />
-            Package
+            {{ $t('package') }}
           </NuxtLink>
           <NuxtLink
             to="#form-booking"
@@ -17,7 +17,7 @@
             @click="scrollToForm(1)"
           >
             <svg-airplane class="text-base" />
-            Find Flight
+            {{ $t('flights') }}
           </NuxtLink>
           <NuxtLink
             to="#form-booking"
@@ -25,7 +25,7 @@
             @click="scrollToForm(2)"
           >
             <svg-bed class="text-base" />
-            Find Hotel
+            {{ $t('hotel') }}
           </NuxtLink>
         </div>
 
@@ -45,14 +45,14 @@
         </NuxtLink>
 
         <div
-          class="col-span-6 flex items-center justify-end gap-2 md:gap-8 lg:col-span-3"
+          class="col-span-6 flex items-center justify-end gap-2 sm:gap-8 lg:col-span-3"
         >
           <!-- <ColorMode /> -->
 
           <LanguageSwitcher />
 
           <NuxtLink to="/" class="hidden items-center gap-1 sm:inline-block">
-            Login
+            {{ $t('login') }}
           </NuxtLink>
 
           <UButton
@@ -61,7 +61,7 @@
             color="white"
             size="lg"
           >
-            Sign Up
+            {{ $t('sign-up') }}
           </UButton>
 
           <!-- Tools for small screen -->
@@ -79,9 +79,9 @@
 
             <template #account="{ item }">
               <div class="text-left">
-                <p>{{ item.label }}</p>
-                <p class="truncate text-xs text-gray-400 dark:text-gray-500">
-                  How can we help you today?
+                <p class="font-semibold text-black">{{ item.label }}</p>
+                <p class="text-xs text-gray-400 dark:text-gray-500">
+                  {{ $t('how-can-we-help-you-today') }}
                 </p>
               </div>
             </template>
@@ -104,7 +104,7 @@
 <script lang="ts" setup>
 const localeRoute = useLocaleRoute()
 const router = useRouter()
-
+const { t } = useI18n()
 const menus = [
   [
     {
@@ -115,11 +115,11 @@ const menus = [
   ],
   [
     {
-      label: 'Login',
+      label: t('login'),
       icon: 'i-heroicons-arrow-left-on-rectangle',
     },
     {
-      label: 'Sign up',
+      label: t('sign-up'),
       icon: 'i-heroicons-rectangle-group',
     },
   ],

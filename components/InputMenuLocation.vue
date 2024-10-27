@@ -3,7 +3,7 @@
     v-model="selected"
     :search="search"
     :loading="loading"
-    placeholder="Search for a location in Japan..."
+    :placeholder="$t('search-for-a-location-in-japan')"
     option-attribute="display_name"
     trailing
     by="osm_id"
@@ -11,7 +11,7 @@
     aria-label="Search for a location in Japan"
     name="location"
   >
-    <template #empty> Type something to search... </template>
+    <template #empty> {{ $t('type-something-to-search') }} </template>
   </UInputMenu>
 </template>
 

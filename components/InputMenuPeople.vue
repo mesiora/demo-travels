@@ -11,9 +11,10 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const people = new Array(100).fill(0).map((_, i) => ({
   value: i + 1,
-  label: `${i + 1} person${i === 0 ? '' : 's'}`,
+  label: `${i + 1} ${t('people')}`,
 }))
 
 const selected = ref(people[0].value)
