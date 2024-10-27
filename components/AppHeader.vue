@@ -1,6 +1,6 @@
 <template>
   <header class="fixed left-0 top-0 z-[100] w-screen text-sm">
-    <UContainer class="container">
+    <UContainer class="nav-menu container">
       <nav class="grid grid-cols-7 gap-4 px-4 py-7 text-white sm:px-7 xl:px-0">
         <div class="col-span-3 hidden items-center gap-8 lg:flex">
           <NuxtLink
