@@ -53,5 +53,3 @@
     </UContainer>
   </footer>
 </template>
-
-<style lang="postcss"></style>

@@ -231,7 +231,8 @@ import IDG1 from '~/assets/images/dg-1.webp'
 import IDG2 from '~/assets/images/dg-2.webp'
 import IDG3 from '~/assets/images/dg-3.webp'
 
-const locale = computed(() => useI18n().locale.value as 'en' | 'th')
+const i18n = useI18n()
+const locale = computed(() => i18n.locale.value as 'en' | 'th')
 
 const popularDestinations = [
   {
