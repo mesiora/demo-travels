@@ -1,7 +1,7 @@
 <template>
   <footer class="relative bg-black p-7 py-16 text-xs text-white">
     <UContainer class="container relative">
-      <Subscribe top-hang />
+      <Subscribe top-hang class="gsap-fade-in" />
       <!-- <FormBooking bottom-hang /> -->
       <div
         class="flex flex-col items-center justify-between gap-4 pt-14 md:flex-row"

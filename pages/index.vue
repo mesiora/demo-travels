@@ -4,15 +4,17 @@
 
     <section class="overflow-hidden py-7">
       <UContainer class="container">
-        <h3 class="mb-3 text-3xl font-bold tracking-wide">
+        <h3 class="gsap-fade-in mb-3 text-3xl font-bold tracking-wide">
           {{ $t('popular-destinations') }}
         </h3>
-        <p class="text-gray-600">
+        <p class="gsap-fade-in text-gray-600">
           {{ $t('popular-destinations-subtitle') }}
         </p>
       </UContainer>
 
-      <div class="swiper-free-mode-container my-4 md:my-6 xl:my-10">
+      <div
+        class="gsap-fade-in swiper-free-mode-container my-4 md:my-6 xl:my-10"
+      >
         <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="2"
@@ -73,15 +75,17 @@
 
     <section class="py-7">
       <UContainer class="container">
-        <h3 class="mb-3 text-3xl font-bold tracking-wide">
+        <h3 class="gsap-fade-in mb-3 text-3xl font-bold tracking-wide">
           {{ $t('special-offer') }}
         </h3>
-        <p class="text-gray-600">
+        <p class="gsap-fade-in text-gray-600">
           {{ $t('special-offer-subtitle') }}
         </p>
       </UContainer>
 
-      <div class="swiper-free-mode-container my-4 md:my-6 xl:my-10">
+      <div
+        class="gsap-fade-in swiper-free-mode-container my-4 md:my-6 xl:my-10"
+      >
         <Swiper
           :modules="[SwiperFreeMode]"
           :slides-per-view="2"
@@ -177,15 +181,15 @@
 
     <section class="py-7">
       <UContainer class="container">
-        <h3 class="mb-3 text-3xl font-bold tracking-wide">
+        <h3 class="gsap-fade-in mb-3 text-3xl font-bold tracking-wide">
           {{ $t('destination-gallery') }}
         </h3>
-        <p class="text-gray-600">
+        <p class="gsap-fade-in text-gray-600">
           {{ $t('destination-gallery-subtitle') }}
         </p>
       </UContainer>
 
-      <div class="my-4 md:my-6 xl:my-10">
+      <div class="gsap-fade-in my-4 md:my-6 xl:my-10">
         <Swiper
           :modules="[SwiperFreeMode, SwiperAutoplay]"
           :slides-per-view="3"
