@@ -1,4 +1,20 @@
 {
-  "quote": "Nuxt 3 frontend เทมเพลต สำหรับ third-party API integrations",
-  "get-started": "เริ่ม"
+  "helping-others": "ช่วยเหลือผู้อื่น",
+  "live-travel": "ใช้ชีวิตและท่องเที่ยว",
+  "exploring-new-places": "การสำรวจสถานที่ใหม่ๆ เป็นวิธีที่ดีในการผ่อนคลายและทำให้จิตใจสงบ",
+  "popular-destinations": "จุดหมายปลายทางยอดนิยม",
+  "popular-destinations-subtitle": "สถานที่ท่องเที่ยวยอดนิยมทั่วโลก ตั้งแต่สถานที่ประวัติศาสตร์ไปจนถึงสิ่งมหัศจรรย์ทางธรรมชาติ",
+  "special-offer": "ข้อเสนอพิเศษ",
+  "special-offer-subtitle": "ตรวจสอบข้อเสนอพิเศษและส่วนลดของเรา",
+  "destination-gallery": "แกลเลอรี่จุดหมายปลายทาง",
+  "destination-gallery-subtitle": "แกลเลอรี่ภาพการเดินทางของเรา",
+  "reviews": "รีวิว",
+  "days": "วัน",
+  "package": "แพ็คเกจ",
+  "flights": "เที่ยวบิน",
+  "hotel": "โรงแรม",
+  "search": "ค้นหา",
+  "cookies-policy": "นโยบายคุกกี้",
+  "terms": "ข้อกำหนด",
+  "privacy-policy": "นโยบายความเป็นส่วนตัว"
 }

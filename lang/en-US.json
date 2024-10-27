@@ -1,4 +1,20 @@
 {
-  "quote": "Nuxt 3 frontend template for third-party API integrations.",
-  "get-started": "Get Started"
+  "helping-others": "Helping Others",
+  "live-travel": "LIVE & TRAVEL",
+  "exploring-new-places": "Exploring new places is a great way to relax and clear your mind.",
+  "popular-destinations": "Popular Destinations",
+  "popular-destinations-subtitle": "Most popular destinations around the world, from historical places to natural wonders.",
+  "special-offer": "Special Offer",
+  "special-offer-subtitle": "Check out our special offer and discounts",
+  "destination-gallery": "Destination Gallery",
+  "destination-gallery-subtitle": "Our photo gallery on trip",
+  "reviews": "reviews",
+  "days": "Day(s)",
+  "package": "Package",
+  "flights": "Flights",
+  "hotel": "Hotel",
+  "search": "Search",
+  "cookies-policy": "Cookies Policy",
+  "terms": "Terms",
+  "privacy-policy": "Privacy Policy"
 }

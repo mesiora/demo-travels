@@ -1,18 +1,18 @@
 <template>
   <div class="divide-x uppercase">
     <NuxtLink
-      v-for="locale in locales"
-      :key="locale.code"
-      :to="switchLocalePath(locale.code)"
+      v-for="locale in i18n.availableLocales"
+      :key="locale"
+      :to="switchLocalePath(locale)"
       class="px-2"
-      :title="locale.code"
+      :title="locale"
     >
-      {{ locale.code }}
+      {{ locale }}
     </NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
-const { locales } = useI18n()
+const i18n = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 </script>

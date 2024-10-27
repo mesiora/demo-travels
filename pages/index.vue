@@ -5,11 +5,10 @@
     <section class="overflow-hidden py-7">
       <UContainer class="container">
         <h3 class="mb-3 text-3xl font-bold tracking-wide">
-          Popular Destinations
+          {{ $t('popular-destinations') }}
         </h3>
         <p class="text-gray-600">
-          Most popular destinations around the world, from historical places to
-          natural wonders.
+          {{ $t('popular-destinations-subtitle') }}
         </p>
       </UContainer>
 
@@ -53,13 +52,13 @@
                   <h4
                     class="mb-1 text-xl font-medium md:mb-2 md:text-2xl xl:mb-3"
                   >
-                    {{ slide.title }}
+                    {{ slide.title[locale] }}
                   </h4>
                   <div
                     class="flex items-center gap-1 text-sm md:text-base xl:gap-3 xl:text-xl"
                   >
                     <svg-marker class="text-sm xl:text-xl" />
-                    <p>{{ slide.location }}</p>
+                    <p>{{ slide.location[locale] }}</p>
                   </div>
                 </div>
               </div>
@@ -74,8 +73,12 @@
 
     <section class="py-7">
       <UContainer class="container">
-        <h3 class="mb-3 text-3xl font-bold tracking-wide">Special Offer</h3>
-        <p class="text-gray-600">Check out our special offer and discounts</p>
+        <h3 class="mb-3 text-3xl font-bold tracking-wide">
+          {{ $t('special-offer') }}
+        </h3>
+        <p class="text-gray-600">
+          {{ $t('special-offer-subtitle') }}
+        </p>
       </UContainer>
 
       <div class="swiper-free-mode-container my-4 md:my-6 xl:my-10">
@@ -120,12 +123,12 @@
                   class="flex items-center gap-1 text-sm text-gray-600 xl:gap-3 xl:text-base"
                 >
                   <svg-marker class="text-sm xl:text-base" />
-                  <p>{{ slide.location }}</p>
+                  <p>{{ slide.location[locale] }}</p>
                 </div>
                 <h4
                   class="mb-1 line-clamp-2 text-xl font-medium xl:mb-3 xl:line-clamp-1 xl:text-2xl"
                 >
-                  {{ slide.title }}
+                  {{ slide.title[locale] }}
                 </h4>
                 <div
                   class="flex flex-col gap-1 text-gray-600 xl:flex-row xl:items-center xl:gap-3"
@@ -137,12 +140,12 @@
                       class="text-sm xl:text-base"
                     />
                   </div>
-                  <p class="text-xs">{{ slide.review }} Reviews</p>
+                  <p class="text-xs">{{ slide.review }} {{ $t('reviews') }}</p>
                 </div>
                 <div
                   class="my-2 line-clamp-3 text-sm xl:my-6 xl:line-clamp-4 xl:text-base"
                 >
-                  <p>{{ slide.description }}</p>
+                  <p>{{ slide.description[locale] }}</p>
                 </div>
                 <div
                   class="flex flex-col justify-between gap-1 xl:flex-row xl:gap-3"
@@ -151,7 +154,7 @@
                     class="flex items-center gap-1 text-xs xl:gap-3 xl:text-base"
                   >
                     <svg-clock class="text-white xl:text-base" />
-                    <p>{{ slide.duration }} Day(s)</p>
+                    <p>{{ slide.duration }} {{ $t('days') }}</p>
                   </div>
                   <div class="xl:text-right">
                     <p class="text-sm text-gray-600 line-through">
@@ -175,9 +178,11 @@
     <section class="py-7">
       <UContainer class="container">
         <h3 class="mb-3 text-3xl font-bold tracking-wide">
-          Destination Gallery
+          {{ $t('destination-gallery') }}
         </h3>
-        <p class="text-gray-600">Our photo gallery on trip</p>
+        <p class="text-gray-600">
+          {{ $t('destination-gallery-subtitle') }}
+        </p>
       </UContainer>
 
       <div class="my-4 md:my-6 xl:my-10">
@@ -226,72 +231,120 @@ import IDG1 from '~/assets/images/dg-1.webp'
 import IDG2 from '~/assets/images/dg-2.webp'
 import IDG3 from '~/assets/images/dg-3.webp'
 
-const { width: wWidth } = useWindowSize()
-
-const isSmallScreen = computed(() => wWidth.value < 1025)
+const locale = computed(() => useI18n().locale.value as 'en' | 'th')
 
 const popularDestinations = [
   {
-    location: 'Shizuoka, Japan',
-    title: 'Shizuoka',
+    location: {
+      en: 'Shizuoka, Japan',
+      th: 'ชิซูโอกะ, ญี่ปุ่น',
+    },
+    title: {
+      en: 'Shizuoka',
+      th: 'ชิซูโอกะ',
+    },
     image: IPD1,
   },
   {
-    location: 'Osaka, Japan',
-    title: 'Osaka',
+    location: {
+      en: 'Osaka, Japan',
+      th: 'โอซาก้า, ญี่ปุ่น',
+    },
+    title: {
+      en: 'Osaka',
+      th: 'โอซาก้า',
+    },
     image: IPD2,
   },
   {
-    location: 'Hong Kong',
-    title: 'Hong Kong',
+    location: {
+      en: 'Hong Kong',
+      th: 'ฮ่องกง',
+    },
+    title: {
+      en: 'Hong Kong',
+      th: 'ฮ่องกง',
+    },
     image: IPD3,
   },
 ]
 
 const specialOffer = [
   {
-    location: 'Athens, Greece',
-    title: 'Athens 4 Nights 5 Days',
+    location: {
+      en: 'Athens, Greece',
+      th: 'เอเธนส์, กรีซ',
+    },
+    title: {
+      en: 'Athens 4 Nights 5 Days',
+      th: 'เอเธนส์ 4 คืน 5 วัน',
+    },
     star: 5,
     review: 260,
-    description:
-      '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+    description: {
+      en: '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+      th: '5 คืน 4 วันในโรงแรม 5 ดาว รวมอาหารเช้าและอาหารกลางวัน เป็นที่นิยมมากในยุคฟื้นฟูศิลปวิทยา เส้นทางและการเดินทางผ่านเมืองต่างๆ ของโลกในวรรณกรรมคลาสสิก',
+    },
     image: ISO1,
     price: 31000.66,
     discountPrice: 29177.09,
     duration: 5,
   },
   {
-    location: 'Rome, Italy',
-    title: 'Rome 4 Nights 5 Days',
+    location: {
+      en: 'Rome, Italy',
+      th: 'โรม, อิตาลี',
+    },
+    title: {
+      en: 'Rome 4 Nights 5 Days',
+      th: 'โรม 4 คืน 5 วัน',
+    },
     star: 5,
     review: 100,
-    description:
-      '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+    description: {
+      en: '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+      th: '5 คืน 4 วันในโรงแรม 5 ดาว รวมอาหารเช้าและอาหารกลางวัน เป็นที่นิยมมากในยุคฟื้นฟูศิลปวิทยา เส้นทางและการเดินทางผ่านเมืองต่างๆ ของโลกในวรรณกรรมคลาสสิก',
+    },
     image: ISO2,
     price: 29177.09,
     discountPrice: 27353.52,
     duration: 5,
   },
   {
-    location: 'Lisbon, Portugal',
-    title: 'Lisbon 4 Nights 5 Days',
+    location: {
+      en: 'Lisbon, Portugal',
+      th: 'ลิสบอน, โปรตุเกส',
+    },
+    title: {
+      en: 'Lisbon 4 Nights 5 Days',
+      th: 'ลิสบอน 4 คืน 5 วัน',
+    },
     star: 5,
     review: 150,
-    description:
-      '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+    description: {
+      en: '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+      th: '5 คืน 4 วันในโรงแรม 5 ดาว รวมอาหารเช้าและอาหารกลางวัน เป็นที่นิยมมากในยุคฟื้นฟูศิลปวิทยา เส้นทางและการเดินทางผ่านเมืองต่างๆ ของโลกในวรรณกรรมคลาสสิก',
+    },
     image: ISO3,
     price: 23341.67,
     discountPrice: 18235.68,
     duration: 5,
   },
   {
-    location: 'Shizuoka, Japan',
-    title: 'Shizuoka 4 Nights 5 Days',
+    location: {
+      en: 'Shizuoka, Japan',
+      th: 'ชิซูโอกะ, ญี่ปุ่น',
+    },
+    title: {
+      en: 'Shizuoka 4 Nights 5 Days',
+      th: 'ชิซูโอกะ 4 คืน 5 วัน',
+    },
     star: 5,
     review: 600,
-    description:
-      '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+    description: {
+      en: '5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.',
+      th: '5 คืน 4 วันในโรงแรม 5 ดาว รวมอาหารเช้าและอาหารกลางวัน เป็นที่นิยมมากในยุคฟื้นฟูศิลปวิทยา เส้นทางและการเดินทางผ่านเมืองต่างๆ ของโลกในวรรณกรรมคลาสสิก',
+    },
     image: IPD1,
     price: 60000.66,
     discountPrice: 45177.09,

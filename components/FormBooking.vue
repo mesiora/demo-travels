@@ -15,7 +15,7 @@
           @click="activeTab = 0"
         >
           <svg-flag class="text-sm sm:text-base" />
-          Package
+          {{ $t('package') }}
         </div>
       </li>
       <li>
@@ -25,7 +25,7 @@
           @click="activeTab = 1"
         >
           <svg-airplane class="text-sm sm:text-base" />
-          Flights
+          {{ $t('flights') }}
         </div>
       </li>
       <li>
@@ -35,7 +35,7 @@
           @click="activeTab = 2"
         >
           <svg-bed class="text-sm sm:text-base" />
-          Hotel
+          {{ $t('hotel') }}
         </div>
       </li>
     </ul>
@@ -68,11 +68,11 @@
         />
 
         <UButton
-          class="justify-center font-semibold"
+          class="justify-center font-semibold uppercase"
           :size="btnSize"
           aria-label="Search"
         >
-          SEARCH
+          {{ $t('search') }}
         </UButton>
       </div>
     </div>

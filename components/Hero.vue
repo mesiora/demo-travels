@@ -14,15 +14,15 @@
           <h2
             class="font-prompt text-[30px] font-light tracking-wide sm:text-[40px] md:text-[44px]"
           >
-            Helping Others
+            {{ $t('helping-others') }}
           </h2>
           <h1
             class="font-prompt text-[46px] font-medium tracking-wide sm:text-[64px] md:text-[80px]"
           >
-            LIVE & TRAVEL
+            {{ $t('live-travel') }}
           </h1>
           <h2 class="sm:text-xl">
-            Exploring new places is a great way to relax and clear your mind.
+            {{ $t('exploring-new-places') }}
           </h2>
         </div>
 

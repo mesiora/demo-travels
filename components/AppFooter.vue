@@ -45,9 +45,9 @@
         <div
           class="order-2 flex flex-col items-center gap-3 sm:flex-row md:order-2 md:gap-5"
         >
-          <NuxtLink to="/"> Cookies Policy </NuxtLink>
-          <NuxtLink to="/"> Terms </NuxtLink>
-          <NuxtLink to="/"> Privacy Policy </NuxtLink>
+          <NuxtLink to="/"> {{ $t('cookies-policy') }} </NuxtLink>
+          <NuxtLink to="/"> {{ $t('terms') }} </NuxtLink>
+          <NuxtLink to="/"> {{ $t('privacy-policy') }} </NuxtLink>
         </div>
       </div>
     </UContainer>

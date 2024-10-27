@@ -2,7 +2,7 @@
   <main>
     <AppHeader />
     <slot />
-    <LazyAppFooter />
+    <AppFooter />
   </main>
 </template>
 
