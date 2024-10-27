@@ -16,7 +16,7 @@ export default <Partial<Config>>{
     },
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        sans: ['Montserrat', 'Prompt', ...defaultTheme.fontFamily.sans],
         prompt: ['Prompt', ...defaultTheme.fontFamily.mono],
       },
       colors: {

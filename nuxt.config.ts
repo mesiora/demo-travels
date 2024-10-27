@@ -68,7 +68,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Prompt: [300, 500],
+      Prompt: [300, 400],
       Montserrat: [400, 500],
     },
   },
