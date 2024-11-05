@@ -51,9 +51,18 @@
 
           <LanguageSwitcher />
 
-          <NuxtLink to="/" class="hidden items-center gap-1 sm:inline-block">
+          <NuxtLink
+            to="/"
+            class="hidden items-center gap-1 sm:inline-block"
+            @click="showLogin = true"
+          >
             {{ $t('login') }}
           </NuxtLink>
+
+          <LoginPopup
+            :class="showLogin ? 'fade-enter-active' : 'fade-leave-active'"
+            @close="showLogin = false"
+          />
 
           <UButton
             variant="solid"
@@ -87,11 +96,14 @@
             </template>
 
             <template #item="{ item }">
-              <span class="truncate">{{ item.label }}</span>
+              <span class="truncate" @click="showLogin = true">{{
+                item.label
+              }}</span>
 
               <UIcon
                 :name="item.icon"
                 class="ms-auto h-4 w-4 flex-shrink-0 text-gray-400 dark:text-gray-500"
+                @click="showLogin = true"
               />
             </template>
           </UDropdown>
@@ -102,6 +114,8 @@
 </template>
 
 <script lang="ts" setup>
+import LoginPopup from './Login.vue'
+const showLogin = ref(false)
 const localeRoute = useLocaleRoute()
 const router = useRouter()
 const { t } = useI18n()
@@ -157,6 +171,15 @@ function scrollToForm(index: number) {
     router.replace({ query: { form: index } })
   }
 }
+
+// Watch for changes in isModalOpen to toggle body scroll
+watch(showLogin, (value) => {
+  if (value) {
+    document.body.classList.add('overflow-hidden')
+  } else {
+    document.body.classList.remove('overflow-hidden')
+  }
+})
 </script>
 
 <style lang="postcss">
@@ -179,5 +202,16 @@ header {
       }
     }
   }
+}
+
+.fade-enter-active {
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease; /* Transition both properties */
+}
+
+.fade-leave-active {
+  opacity: 0;
+  visibility: hidden; /* Start hidden */
 }
 </style>
