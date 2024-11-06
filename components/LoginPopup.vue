@@ -4,7 +4,7 @@
     class="fixed inset-0 z-50 flex h-screen items-center justify-center bg-black bg-opacity-50"
   >
     <div
-      class="relative w-full max-w-md rounded-lg bg-white p-4 shadow-lg dark:bg-gray-700"
+      class="relative max-w-md rounded-lg bg-white p-4 shadow-lg sm:w-full dark:bg-gray-700"
     >
       <div class="flex justify-end p-2">
         <button
@@ -67,7 +67,6 @@
             class="flex items-center text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             <input
-              v-model="rememberMe"
               type="checkbox"
               class="h-4 w-4 rounded border border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-600"
             />

@@ -96,15 +96,19 @@
             </template>
 
             <template #item="{ item }">
-              <span class="truncate" @click="showLogin = true">{{
-                item.label
-              }}</span>
-
-              <UIcon
-                :name="item.icon"
-                class="ms-auto h-4 w-4 flex-shrink-0 text-gray-400 dark:text-gray-500"
+              <div
+                class="flex w-full cursor-pointer items-center"
                 @click="showLogin = true"
-              />
+              >
+                <span class="truncate">
+                  {{ item.label }}
+                </span>
+
+                <UIcon
+                  :name="item.icon"
+                  class="ms-auto h-4 w-4 flex-shrink-0 text-gray-400 dark:text-gray-500"
+                />
+              </div>
             </template>
           </UDropdown>
         </div>
@@ -114,7 +118,7 @@
 </template>
 
 <script lang="ts" setup>
-import LoginPopup from './Login.vue'
+import LoginPopup from './LoginPopup.vue'
 const showLogin = ref(false)
 const localeRoute = useLocaleRoute()
 const router = useRouter()
