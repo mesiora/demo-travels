@@ -13,8 +13,17 @@ export default defineNuxtPlugin((nuxtApp) => {
     ease: 'power2.out',
   }
 
+  const killScrollAnimations = () => {
+    ScrollTrigger.getAll().forEach((trigger) => {
+      trigger.kill()
+    })
+  }
+
   // Function to setup animations
   const setupScrollAnimations = () => {
+    // Kill all existing ScrollTrigger animations
+    killScrollAnimations()
+
     // Get all elements with the .gsap-fade-in class
     const elements = document.querySelectorAll('.gsap-fade-in')
 
@@ -33,24 +42,26 @@ export default defineNuxtPlugin((nuxtApp) => {
         ease: defaultSettings.ease,
         scrollTrigger: {
           trigger: element,
-          start: 'top 80%', // Trigger when element is 80% from the top of viewport
+          start: 'top 80%',
           // end: 'top 20%',
-          toggleActions: 'play reverse play reverse', // play on enter, reverse on leave
-          markers: import.meta.dev, // Show markers only in development
+          toggleActions: 'play reverse play reverse',
+          markers: import.meta.dev,
         },
       })
     })
   }
 
-  // Setup on page ready
   if (import.meta.client) {
-    nuxtApp.hook('app:mounted', () => {
-      setupScrollAnimations()
-    })
-
-    // Rerun setup when route changes (for SPA navigation)
     nuxtApp.hook('page:finish', () => {
-      setupScrollAnimations()
+      // Wait for the elements to be created
+      setTimeout(() => {
+        const urlParams = new URLSearchParams(window.location.search)
+        if (urlParams.has('disable-scroll-animation')) {
+          return
+        }
+
+        setupScrollAnimations()
+      }, 100)
     })
   }
 })

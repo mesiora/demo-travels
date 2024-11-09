@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed left-0 top-0 z-[100] w-screen text-sm">
+  <header class="fixed left-0 top-0 z-40 w-screen text-sm">
     <UContainer class="nav-menu container">
       <nav class="grid grid-cols-7 gap-4 px-4 py-7 text-white sm:px-7 xl:px-0">
         <div class="col-span-3 hidden items-center gap-8 lg:flex">
@@ -54,21 +54,17 @@
           <NuxtLink
             to="/"
             class="hidden items-center gap-1 sm:inline-block"
-            @click="showLogin = true"
+            @click="isSignInModalVisible = true"
           >
             {{ $t('login') }}
           </NuxtLink>
-
-          <LoginPopup
-            :class="showLogin ? 'fade-enter-active' : 'fade-leave-active'"
-            @close="showLogin = false"
-          />
 
           <UButton
             variant="solid"
             class="hidden font-semibold sm:inline-block"
             color="white"
             size="lg"
+            @click="isSignUpModalVisible = true"
           >
             {{ $t('sign-up') }}
           </UButton>
@@ -96,10 +92,7 @@
             </template>
 
             <template #item="{ item }">
-              <div
-                class="flex w-full cursor-pointer items-center"
-                @click="showLogin = true"
-              >
+              <div class="flex w-full cursor-pointer items-center">
                 <span class="truncate">
                   {{ item.label }}
                 </span>
@@ -114,15 +107,24 @@
         </div>
       </nav>
     </UContainer>
+
+    <ModalSignIn
+      v-model:visible="isSignInModalVisible"
+      @switch-modal="onSwitchModal"
+    />
+
+    <ModalSignUp
+      v-model:visible="isSignUpModalVisible"
+      @switch-modal="onSwitchModal"
+    />
   </header>
 </template>
 
 <script lang="ts" setup>
-import LoginPopup from './LoginPopup.vue'
-const showLogin = ref(false)
 const localeRoute = useLocaleRoute()
 const router = useRouter()
 const { t } = useI18n()
+
 const menus = [
   [
     {
@@ -135,10 +137,12 @@ const menus = [
     {
       label: t('login'),
       icon: 'i-heroicons-arrow-left-on-rectangle',
+      click: () => (isSignInModalVisible.value = true),
     },
     {
       label: t('sign-up'),
       icon: 'i-heroicons-rectangle-group',
+      click: () => (isSignUpModalVisible.value = true),
     },
   ],
 ]
@@ -176,14 +180,18 @@ function scrollToForm(index: number) {
   }
 }
 
-// Watch for changes in isModalOpen to toggle body scroll
-watch(showLogin, (value) => {
-  if (value) {
-    document.body.classList.add('overflow-hidden')
+const isSignInModalVisible = ref(false)
+const isSignUpModalVisible = ref(false)
+
+function onSwitchModal(modal: string) {
+  if (modal === 'signIn') {
+    isSignInModalVisible.value = true
+    isSignUpModalVisible.value = false
   } else {
-    document.body.classList.remove('overflow-hidden')
+    isSignInModalVisible.value = false
+    isSignUpModalVisible.value = true
   }
-})
+}
 </script>
 
 <style lang="postcss">

@@ -1,7 +1,7 @@
 <template>
   <form
     id="form-subscribe"
-    class="z-50 mx-0 w-full rounded-2xl bg-white px-7 py-12 sm:mx-10 sm:w-[calc(100%-5rem)] lg:px-8 lg:py-16 2xl:mx-0 2xl:w-full"
+    class="z-20 mx-0 w-full rounded-2xl bg-white px-7 py-12 sm:mx-10 sm:w-[calc(100%-5rem)] lg:px-8 lg:py-16 2xl:mx-0 2xl:w-full"
     :class="{
       'top-hang absolute bottom-full left-0 translate-y-4': topHang,
     }"

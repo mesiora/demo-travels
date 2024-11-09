@@ -1,7 +1,7 @@
 <template>
   <form
     id="form-booking"
-    class="z-50 mx-2 w-[calc(100%-1rem)] rounded-2xl bg-white p-7 shadow-lg shadow-slate-100 sm:mx-10 sm:w-[calc(100%-5rem)] xl:p-8 2xl:mx-0 2xl:w-full"
+    class="z-20 mx-2 w-[calc(100%-1rem)] rounded-2xl bg-white p-7 shadow-lg shadow-slate-100 sm:mx-10 sm:w-[calc(100%-5rem)] xl:p-8 2xl:mx-0 2xl:w-full"
     :class="{
       'bottom-hang absolute left-0 top-full -translate-y-20 sm:-translate-y-1/2':
         bottomHang,
