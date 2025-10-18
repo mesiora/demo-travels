@@ -19,7 +19,6 @@ export default defineNuxtConfig({
       },
       meta: [
         {
-          hid: 'description',
           name: 'description',
           content: 'A demo Nuxt.js project',
         },
@@ -42,8 +41,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
   ],
 
-  colorMode: {
-    preference: 'light',
+  ui: {
+    colorMode: false,
   },
 
   svgo: {
@@ -52,18 +51,27 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    vueI18n: './i18n.config.ts',
-    locales: [
-      {
-        code: 'en',
-        language: 'en-US',
-      },
-      {
-        code: 'th',
-        language: 'th-TH',
-      },
-    ],
     defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'en', name: 'English', language: 'en-US', file: 'en-US.json' },
+      { code: 'th', name: 'Thai', language: 'th-TH', file: 'th-TH.json' },
+    ],
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        'gsap',
+        'gsap/ScrollTrigger',
+        'swiper/vue',
+        'swiper/modules',
+        'date-fns',
+        'v-calendar',
+      ],
+    },
   },
 
   googleFonts: {
