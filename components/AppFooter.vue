@@ -6,12 +6,26 @@
       <div
         class="flex flex-col items-center justify-between gap-4 pt-14 md:flex-row"
       >
-        <div class="order-3 md:order-1">
-          © 2021
-          <NuxtLink to="https://github.com/medusiora" target="_blank">
-            Medusiora
-          </NuxtLink>
-        </div>
+        <a
+          href="https://www.forwwward.solutions"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="order-3 md:order-1"
+        >
+          <div class="flex items-center gap-1">
+            <span class="sr-only">forwwward.solutions</span>
+            <UAvatar
+              src="https://www.forwwward.solutions/apple-icon-60x60.png"
+              alt="Avatar"
+            />
+            <span
+              class="bg-black px-2 text-white dark:bg-white dark:text-black"
+            >
+              forwwward.solutions
+            </span>
+          </div>
+        </a>
+
         <div class="order-2 md:order-3">
           <UButton
             color="white"
